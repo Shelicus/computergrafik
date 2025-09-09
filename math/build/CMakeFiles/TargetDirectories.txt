@@ -1,0 +1,14 @@
+C:/Dokumente/workspace/computergrafik/math/build/CMakeFiles/math_test.dir
+C:/Dokumente/workspace/computergrafik/math/build/CMakeFiles/INSTALL.dir
+C:/Dokumente/workspace/computergrafik/math/build/CMakeFiles/ALL_BUILD.dir
+C:/Dokumente/workspace/computergrafik/math/build/CMakeFiles/ZERO_CHECK.dir
+C:/Dokumente/workspace/computergrafik/math/build/_deps/googletest-build/CMakeFiles/INSTALL.dir
+C:/Dokumente/workspace/computergrafik/math/build/_deps/googletest-build/CMakeFiles/ALL_BUILD.dir
+C:/Dokumente/workspace/computergrafik/math/build/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir
+C:/Dokumente/workspace/computergrafik/math/build/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir
+C:/Dokumente/workspace/computergrafik/math/build/_deps/googletest-build/googlemock/CMakeFiles/INSTALL.dir
+C:/Dokumente/workspace/computergrafik/math/build/_deps/googletest-build/googlemock/CMakeFiles/ALL_BUILD.dir
+C:/Dokumente/workspace/computergrafik/math/build/_deps/googletest-build/googletest/CMakeFiles/gtest.dir
+C:/Dokumente/workspace/computergrafik/math/build/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir
+C:/Dokumente/workspace/computergrafik/math/build/_deps/googletest-build/googletest/CMakeFiles/INSTALL.dir
+C:/Dokumente/workspace/computergrafik/math/build/_deps/googletest-build/googletest/CMakeFiles/ALL_BUILD.dir
