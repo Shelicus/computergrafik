@@ -1,0 +1,3 @@
+C:/Dokumente/workspace/computergrafik/math/build/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir
+C:/Dokumente/workspace/computergrafik/math/build/_deps/googletest-subbuild/CMakeFiles/ALL_BUILD.dir
+C:/Dokumente/workspace/computergrafik/math/build/_deps/googletest-subbuild/CMakeFiles/ZERO_CHECK.dir

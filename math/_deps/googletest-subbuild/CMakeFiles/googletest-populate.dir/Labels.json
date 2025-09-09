@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "C:/Dokumente/workspace/computergrafik/math/_deps/googletest-subbuild/CMakeFiles/googletest-populate"
+		},
+		{
+			"file" : "C:/Dokumente/workspace/computergrafik/math/_deps/googletest-subbuild/CMakeFiles/f9fb83c6eb8e4d4c6916e24a52325980/googletest-populate.rule"
+		},
+		{
+			"file" : "C:/Dokumente/workspace/computergrafik/math/_deps/googletest-subbuild/CMakeFiles/185dcd26ebbefac8ceff31b8a592e63b/googletest-populate-complete.rule"
+		},
+		{
+			"file" : "C:/Dokumente/workspace/computergrafik/math/_deps/googletest-subbuild/CMakeFiles/97c127ce39180f9289b54280c534a27e/googletest-populate-build.rule"
+		},
+		{
+			"file" : "C:/Dokumente/workspace/computergrafik/math/_deps/googletest-subbuild/CMakeFiles/97c127ce39180f9289b54280c534a27e/googletest-populate-configure.rule"
+		},
+		{
+			"file" : "C:/Dokumente/workspace/computergrafik/math/_deps/googletest-subbuild/CMakeFiles/97c127ce39180f9289b54280c534a27e/googletest-populate-download.rule"
+		},
+		{
+			"file" : "C:/Dokumente/workspace/computergrafik/math/_deps/googletest-subbuild/CMakeFiles/97c127ce39180f9289b54280c534a27e/googletest-populate-install.rule"
+		},
+		{
+			"file" : "C:/Dokumente/workspace/computergrafik/math/_deps/googletest-subbuild/CMakeFiles/97c127ce39180f9289b54280c534a27e/googletest-populate-mkdir.rule"
+		},
+		{
+			"file" : "C:/Dokumente/workspace/computergrafik/math/_deps/googletest-subbuild/CMakeFiles/97c127ce39180f9289b54280c534a27e/googletest-populate-patch.rule"
+		},
+		{
+			"file" : "C:/Dokumente/workspace/computergrafik/math/_deps/googletest-subbuild/CMakeFiles/97c127ce39180f9289b54280c534a27e/googletest-populate-test.rule"
+		},
+		{
+			"file" : "C:/Dokumente/workspace/computergrafik/math/_deps/googletest-subbuild/CMakeFiles/97c127ce39180f9289b54280c534a27e/googletest-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"googletest-populate"
+		],
+		"name" : "googletest-populate"
+	}
+}
