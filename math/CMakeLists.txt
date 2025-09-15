@@ -3,13 +3,6 @@ project (math)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
-if (MSVC)
-    # MSVC-spezifische Flags
-    add_compile_options(/W4 /permissive-)
-else()
-    # GCC/Clang-spezifische Flags
-    add_compile_options(-g -Wall -Wextra -Wpedantic -Wl,--stack,16777216)
-endif()
 
 add_subdirectory(extern/googletest)
 
