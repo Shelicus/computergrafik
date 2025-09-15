@@ -3,18 +3,20 @@ project (math)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
+if (MSVC)
+    # MSVC-spezifische Flags
+    add_compile_options(/W4 /permissive-)
+else()
+    # GCC/Clang-spezifische Flags
+    add_compile_options(-g -Wall -Wextra -Wpedantic -Wl,--stack,16777216)
+endif()
 
-add_compile_options(-g -Wall -Wextra -Wpedantic -Wl,--stack,16777216)
-
-include(FetchContent)
-FetchContent_Declare(
-  googletest
-  URL https://github.com/google/googletest/archive/03597a01ee50ed33e9dfd640b249b4be3799d395.zip
-)
-
-set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
-FetchContent_MakeAvailable(googletest)
+add_subdirectory(extern/googletest)
 
 add_executable(math_test math_test.cc math.cc)
-target_link_libraries(math_test gtest gtest_main)
+target_link_libraries(math_test GTest::gtest
+  GTest::gtest_main)
+  
+enable_testing()
+add_test(NAME MathTests COMMAND math_test)
 
