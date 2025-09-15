@@ -17,26 +17,31 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "INSTALL", "INSTALL.vcxproj"
 		{5D295714-AB01-35E6-ABE2-D8A4B1C3D468} = {5D295714-AB01-35E6-ABE2-D8A4B1C3D468}
 	EndProjectSection
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RUN_TESTS", "RUN_TESTS.vcxproj", "{B0385F53-EB9A-3BDD-9ECB-AD3F0AA26274}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5D295714-AB01-35E6-ABE2-D8A4B1C3D468} = {5D295714-AB01-35E6-ABE2-D8A4B1C3D468}
+	EndProjectSection
+EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ZERO_CHECK", "ZERO_CHECK.vcxproj", "{5D295714-AB01-35E6-ABE2-D8A4B1C3D468}"
 	ProjectSection(ProjectDependencies) = postProject
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gmock", "_deps\googletest-build\googlemock\gmock.vcxproj", "{5389DA0B-D50F-3EBC-91AC-699B07964F87}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gmock", "extern\googletest\googlemock\gmock.vcxproj", "{5389DA0B-D50F-3EBC-91AC-699B07964F87}"
 	ProjectSection(ProjectDependencies) = postProject
 		{5D295714-AB01-35E6-ABE2-D8A4B1C3D468} = {5D295714-AB01-35E6-ABE2-D8A4B1C3D468}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gmock_main", "_deps\googletest-build\googlemock\gmock_main.vcxproj", "{B53559B8-A345-33C7-A7ED-7817CC4977E3}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gmock_main", "extern\googletest\googlemock\gmock_main.vcxproj", "{B53559B8-A345-33C7-A7ED-7817CC4977E3}"
 	ProjectSection(ProjectDependencies) = postProject
 		{5D295714-AB01-35E6-ABE2-D8A4B1C3D468} = {5D295714-AB01-35E6-ABE2-D8A4B1C3D468}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gtest", "_deps\googletest-build\googletest\gtest.vcxproj", "{5B7DC08D-1C9F-3832-9E0B-6E29783D460C}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gtest", "extern\googletest\googletest\gtest.vcxproj", "{5B7DC08D-1C9F-3832-9E0B-6E29783D460C}"
 	ProjectSection(ProjectDependencies) = postProject
 		{5D295714-AB01-35E6-ABE2-D8A4B1C3D468} = {5D295714-AB01-35E6-ABE2-D8A4B1C3D468}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gtest_main", "_deps\googletest-build\googletest\gtest_main.vcxproj", "{A03F51DB-2C8F-32E8-8B96-9C665EF07A66}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gtest_main", "extern\googletest\googletest\gtest_main.vcxproj", "{A03F51DB-2C8F-32E8-8B96-9C665EF07A66}"
 	ProjectSection(ProjectDependencies) = postProject
 		{5D295714-AB01-35E6-ABE2-D8A4B1C3D468} = {5D295714-AB01-35E6-ABE2-D8A4B1C3D468}
 		{5B7DC08D-1C9F-3832-9E0B-6E29783D460C} = {5B7DC08D-1C9F-3832-9E0B-6E29783D460C}
@@ -69,6 +74,10 @@ Global
 		{12357806-6640-3632-B2BE-2E19FD76D089}.Release|x64.ActiveCfg = Release|x64
 		{12357806-6640-3632-B2BE-2E19FD76D089}.MinSizeRel|x64.ActiveCfg = MinSizeRel|x64
 		{12357806-6640-3632-B2BE-2E19FD76D089}.RelWithDebInfo|x64.ActiveCfg = RelWithDebInfo|x64
+		{B0385F53-EB9A-3BDD-9ECB-AD3F0AA26274}.Debug|x64.ActiveCfg = Debug|x64
+		{B0385F53-EB9A-3BDD-9ECB-AD3F0AA26274}.Release|x64.ActiveCfg = Release|x64
+		{B0385F53-EB9A-3BDD-9ECB-AD3F0AA26274}.MinSizeRel|x64.ActiveCfg = MinSizeRel|x64
+		{B0385F53-EB9A-3BDD-9ECB-AD3F0AA26274}.RelWithDebInfo|x64.ActiveCfg = RelWithDebInfo|x64
 		{5D295714-AB01-35E6-ABE2-D8A4B1C3D468}.Debug|x64.ActiveCfg = Debug|x64
 		{5D295714-AB01-35E6-ABE2-D8A4B1C3D468}.Debug|x64.Build.0 = Debug|x64
 		{5D295714-AB01-35E6-ABE2-D8A4B1C3D468}.Release|x64.ActiveCfg = Release|x64
