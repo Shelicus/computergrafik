@@ -2,7 +2,7 @@
 #include "math.tcc"
 
 // contains template instantiations for the 2-, 3- and 4-dimensional cases
-//   to create pre-compiled object files
+//   to create pre-compiled object files -> Damit der Code nur einmal generiert werden muss und von math.h verwendet wird
 
 // instantiations of each template class/struct
 template class Vector<float, 2u>;
@@ -15,18 +15,18 @@ template Vector<float, 2u> operator*(float scalar, Vector<float, 2u> value);
 template Vector<float, 2u> operator+(Vector<float, 2u> value, const Vector<float, 2u> addend);
 template Vector<float, 2u> operator-(Vector<float, 2u> value, const Vector<float, 2u> addend);
 
-//template float operator*(Vector<float, 2u> value, const Vector<float, 2u> addend);
+template float operator*(Vector<float, 2u> value, const Vector<float, 2u> addend);//<-
 
 template Vector<float, 3u> operator*(float scalar, Vector<float, 3u> value);
 template Vector<float, 3u> operator+(Vector<float, 3u> value, const Vector<float, 3u> addend);
 template Vector<float, 3u> operator-(Vector<float, 3u> value, const Vector<float, 3u> addend);
 
-//template float operator*(Vector<float, 3u> value, const Vector<float, 3u> addend);
+template float operator*(Vector<float, 3u> value, const Vector<float, 3u> addend);//<-
 
 template Vector<float, 4u> operator*(float scalar, Vector<float, 4u> value);
 template Vector<float, 4u> operator+(Vector<float, 4u> value, const Vector<float, 4u> addend);
 template Vector<float, 4u> operator-(Vector<float, 4u> value, const Vector<float, 4u> addend);
 
-//template float operator*(Vector<float, 4u> value, const Vector<float, 4u> addend);
+template float operator*(Vector<float, 4u> value, const Vector<float, 4u> addend); //<-
 
 

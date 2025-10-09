@@ -1,6 +1,6 @@
 CMakeFiles/math_test.dir/math_test.cc.obj: \
- D:\Dokumente\workspace_computergrafik\math\math_test.cc \
- D:\Dokumente\workspace_computergrafik\math\math.h \
+ D:\Dokumente\workspace\workspace_computergrafik\math\math_test.cc \
+ D:\Dokumente\workspace\workspace_computergrafik\math\math.h \
  C:/msys64/mingw64/include/c++/14.2.0/initializer_list \
  C:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++config.h \
  C:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/os_defines.h \
@@ -71,7 +71,7 @@ CMakeFiles/math_test.dir/math_test.cc.obj: \
  C:/msys64/mingw64/include/c++/14.2.0/tr1/poly_hermite.tcc \
  C:/msys64/mingw64/include/c++/14.2.0/tr1/poly_laguerre.tcc \
  C:/msys64/mingw64/include/c++/14.2.0/tr1/riemann_zeta.tcc \
- D:/Dokumente/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/gtest.h \
+ D:/Dokumente/workspace/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/gtest.h \
  C:/msys64/mingw64/include/c++/14.2.0/cstdint \
  C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stdint.h \
  C:/msys64/mingw64/include/stdint.h \
@@ -201,9 +201,9 @@ CMakeFiles/math_test.dir/math_test.cc.obj: \
  C:/msys64/mingw64/include/c++/14.2.0/bits/stl_vector.h \
  C:/msys64/mingw64/include/c++/14.2.0/bits/stl_bvector.h \
  C:/msys64/mingw64/include/c++/14.2.0/bits/vector.tcc \
- D:/Dokumente/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/gtest-assertion-result.h \
- D:/Dokumente/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/gtest-message.h \
- D:/Dokumente/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/internal/gtest-port.h \
+ D:/Dokumente/workspace/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/gtest-assertion-result.h \
+ D:/Dokumente/workspace/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/gtest-message.h \
+ D:/Dokumente/workspace/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/internal/gtest-port.h \
  C:/msys64/mingw64/include/c++/14.2.0/version \
  C:/msys64/mingw64/include/string.h \
  C:/msys64/mingw64/include/sec_api/string_s.h \
@@ -217,8 +217,8 @@ CMakeFiles/math_test.dir/math_test.cc.obj: \
  C:/msys64/mingw64/include/c++/14.2.0/bits/locale_facets_nonio.tcc \
  C:/msys64/mingw64/include/c++/14.2.0/bits/locale_conv.h \
  C:/msys64/mingw64/include/sys/stat.h C:/msys64/mingw64/include/io.h \
- D:/Dokumente/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/internal/custom/gtest-port.h \
- D:/Dokumente/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/internal/gtest-port-arch.h \
+ D:/Dokumente/workspace/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/internal/custom/gtest-port.h \
+ D:/Dokumente/workspace/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/internal/gtest-port-arch.h \
  C:/msys64/mingw64/include/direct.h \
  C:/msys64/mingw64/include/c++/14.2.0/condition_variable \
  C:/msys64/mingw64/include/c++/14.2.0/bits/chrono.h \
@@ -234,9 +234,9 @@ CMakeFiles/math_test.dir/math_test.cc.obj: \
  C:/msys64/mingw64/include/c++/14.2.0/bits/this_thread_sleep.h \
  C:/msys64/mingw64/include/semaphore.h \
  C:/msys64/mingw64/include/c++/14.2.0/mutex \
- D:/Dokumente/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/gtest-death-test.h \
- D:/Dokumente/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/internal/gtest-death-test-internal.h \
- D:/Dokumente/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/gtest-matchers.h \
+ D:/Dokumente/workspace/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/gtest-death-test.h \
+ D:/Dokumente/workspace/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/internal/gtest-death-test-internal.h \
+ D:/Dokumente/workspace/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/gtest-matchers.h \
  C:/msys64/mingw64/include/c++/14.2.0/functional \
  C:/msys64/mingw64/include/c++/14.2.0/bits/std_function.h \
  C:/msys64/mingw64/include/c++/14.2.0/unordered_map \
@@ -244,32 +244,32 @@ CMakeFiles/math_test.dir/math_test.cc.obj: \
  C:/msys64/mingw64/include/c++/14.2.0/bits/hashtable.h \
  C:/msys64/mingw64/include/c++/14.2.0/bits/hashtable_policy.h \
  C:/msys64/mingw64/include/c++/14.2.0/bits/enable_special_members.h \
- D:/Dokumente/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/gtest-printers.h \
+ D:/Dokumente/workspace/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/gtest-printers.h \
  C:/msys64/mingw64/include/c++/14.2.0/any \
  C:/msys64/mingw64/include/c++/14.2.0/optional \
  C:/msys64/mingw64/include/c++/14.2.0/utility \
  C:/msys64/mingw64/include/c++/14.2.0/bits/stl_relops.h \
  C:/msys64/mingw64/include/c++/14.2.0/variant \
- D:/Dokumente/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/internal/gtest-internal.h \
+ D:/Dokumente/workspace/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/internal/gtest-internal.h \
  C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/float.h \
  C:/msys64/mingw64/include/float.h \
  C:/msys64/mingw64/include/c++/14.2.0/map \
  C:/msys64/mingw64/include/c++/14.2.0/bits/stl_map.h \
  C:/msys64/mingw64/include/c++/14.2.0/bits/stl_multimap.h \
- D:/Dokumente/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/internal/gtest-filepath.h \
- D:/Dokumente/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/internal/gtest-string.h \
- D:/Dokumente/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/internal/gtest-type-util.h \
+ D:/Dokumente/workspace/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/internal/gtest-filepath.h \
+ D:/Dokumente/workspace/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/internal/gtest-string.h \
+ D:/Dokumente/workspace/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/internal/gtest-type-util.h \
  C:/msys64/mingw64/include/c++/14.2.0/cxxabi.h \
  C:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/cxxabi_tweaks.h \
  C:/msys64/mingw64/include/c++/14.2.0/span \
- D:/Dokumente/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/internal/custom/gtest-printers.h \
- D:/Dokumente/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/gtest-param-test.h \
+ D:/Dokumente/workspace/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/internal/custom/gtest-printers.h \
+ D:/Dokumente/workspace/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/gtest-param-test.h \
  C:/msys64/mingw64/include/c++/14.2.0/iterator \
  C:/msys64/mingw64/include/c++/14.2.0/bits/stream_iterator.h \
- D:/Dokumente/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/internal/gtest-param-util.h \
+ D:/Dokumente/workspace/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/internal/gtest-param-util.h \
  C:/msys64/mingw64/include/c++/14.2.0/cassert \
  C:/msys64/mingw64/include/assert.h \
- D:/Dokumente/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/gtest-test-part.h \
- D:/Dokumente/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/gtest-typed-test.h \
- D:/Dokumente/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/gtest_pred_impl.h \
- D:/Dokumente/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/gtest_prod.h
+ D:/Dokumente/workspace/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/gtest-test-part.h \
+ D:/Dokumente/workspace/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/gtest-typed-test.h \
+ D:/Dokumente/workspace/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/gtest_pred_impl.h \
+ D:/Dokumente/workspace/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/gtest_prod.h

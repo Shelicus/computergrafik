@@ -1,6 +1,6 @@
 CMakeFiles/math_test.dir/math.cc.obj: \
- D:\Dokumente\workspace_computergrafik\math\math.cc \
- D:\Dokumente\workspace_computergrafik\math\math.h \
+ D:\Dokumente\workspace\workspace_computergrafik\math\math.cc \
+ D:\Dokumente\workspace\workspace_computergrafik\math\math.h \
  C:/msys64/mingw64/include/c++/14.2.0/initializer_list \
  C:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++config.h \
  C:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/os_defines.h \
@@ -71,7 +71,7 @@ CMakeFiles/math_test.dir/math.cc.obj: \
  C:/msys64/mingw64/include/c++/14.2.0/tr1/poly_hermite.tcc \
  C:/msys64/mingw64/include/c++/14.2.0/tr1/poly_laguerre.tcc \
  C:/msys64/mingw64/include/c++/14.2.0/tr1/riemann_zeta.tcc \
- D:\Dokumente\workspace_computergrafik\math\math.tcc \
+ D:\Dokumente\workspace\workspace_computergrafik\math\math.tcc \
  C:/msys64/mingw64/include/c++/14.2.0/cassert \
  C:/msys64/mingw64/include/assert.h \
  C:/msys64/mingw64/include/c++/14.2.0/cstdlib

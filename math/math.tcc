@@ -1,4 +1,5 @@
 #include <cassert>
+#include <cmath>
 
 template <class FLOAT_TYPE, size_t N>
 Vector<FLOAT_TYPE, N>::Vector( std::initializer_list<FLOAT_TYPE> values ) {
@@ -92,7 +93,9 @@ Vector<FLOAT_TYPE, 3u> Vector<FLOAT_TYPE, N>::cross_product(const Vector<FLOAT_T
           this->vector[0] * v.vector[1] - this->vector[1] * v.vector[0] };
 }
 
-/*
+
+//The Functions that use the new implementation
+
 template <class FLOAT_TYPE, size_t N>  
 void Vector<FLOAT_TYPE, N>::normalize() {
   *this /= length(); //  +/- INFINITY if length is (near to) zero
@@ -109,5 +112,30 @@ FLOAT_TYPE Vector<FLOAT_TYPE, N>::angle(size_t axis_1, size_t axis_2) const {
   Vector<FLOAT_TYPE, N> normalized = (1.0f / length()) * *this;
   return atan2( normalized[axis_2], normalized[axis_1] );
 }
-*/
 
+
+//My new implementations
+
+template<class FLOAT_TYPE, size_t N>
+FLOAT_TYPE Vector<FLOAT_TYPE, N>::length() const {
+    return std::sqrt(square_of_length());
+}
+
+template<class FLOAT_TYPE, size_t N>
+FLOAT_TYPE Vector<FLOAT_TYPE, N>::square_of_length() const {
+    FLOAT_TYPE result = FLOAT_TYPE(0);
+    for (std::size_t i = 0; i < N; ++i) {
+        result += vector[i] * vector[i];
+    }
+    return result;
+}
+
+
+template <class F, size_t K>
+F operator*(Vector<F, K> vector1, const Vector<F, K> vector2) {
+    F result = F(0);
+    for (std::size_t i = 0; i < K; ++i) {
+        result += vector1.vector[i] * vector2.vector[i];
+    }
+    return result;
+}
