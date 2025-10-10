@@ -400,4 +400,162 @@ TEST(VECTOR, CrossVectorProduct7) {
   EXPECT_NEAR(0.0, cross[2], 0.00001);
 }
 
+//Tests for the implementation 
+//Length
+TEST(VECTOR, length2D){
+  Vector2df v1 = {4.0, 4.0};
+
+  EXPECT_NEAR(5.6568, v1.length(), 0.0001);
+}
+
+TEST(VECTOR, lengthVector2DFloat){
+  Vector2df v1 = {-8.21, -9.218};
+
+  EXPECT_NEAR(12.344, v1.length(), 0.0001);
+}
+
+TEST(VECTOR, lengthZeroVector2D){
+  Vector2df v1 = {0.0, 0.0};
+
+  EXPECT_EQ(0, v1.length());
+}
+
+//<--------------------------------------------------
+
+TEST(VECTOR, lengthVector3D){
+  Vector3df v1 = {2.0, -4.0, 6.0};
+
+  EXPECT_NEAR(7.4833, v1.length(), 0.0001);
+}
+
+TEST(VECTOR, lengthVector3DFloat){
+  Vector3df v1 = {4.55, -2.78, -5.387};
+
+  EXPECT_NEAR(7.5796, v1.length(), 0.0001);
+}
+
+TEST(VECTOR, lengthZeroVector3D){
+  Vector2df v1 = {0.0, 0.0, 0.0};
+
+  EXPECT_EQ(0, v1.length());
+}
+
+//<------------------------------------------------
+
+TEST(VECTOR, lengthVector4D){
+  Vector4df v1 = {8.0, 7.0, 3.0, -5.0};
+
+  EXPECT_NEAR(12.1243, v1.length(), 0.0001);
+}
+
+TEST(VECTOR, lengthVector4DFloat){
+  Vector4df v1 = {4.59, -2.28, 8.36, -5.387};
+
+  EXPECT_NEAR(11.1882, v1.length(), 0.0001);
+}
+
+TEST(VECTOR, lengthZeroVector4D){
+  Vector4df v1 = {0.0, 0.0, 0.0, 0.0};
+
+  EXPECT_EQ(0, v1.length());
+}
+
+//square_of_length
+
+TEST(VECTOR, SquareOfLength2D){
+  Vector2df v1 = {7.0, 7.0};
+
+  EXPECT_EQ(98, v1.square_of_length());
+}
+
+TEST(VECTOR, SquareOfLengthVector2DFloat){
+  Vector2df v1 = {-1.81, -9.518};
+
+  EXPECT_NEAR(93.8684, v1.square_of_length(), 0.0001);
+}
+
+TEST(VECTOR, SquareOfLengthZeroVector2D){
+  Vector2df v1 = {0.0, 0.0};
+
+  EXPECT_EQ(0, v1.square_of_length());
+}
+
+//<--------------------------------------------------
+
+TEST(VECTOR, SquareOfLengthVector3D){
+  Vector3df v1 = {8.0, -6.0, 2.0};
+
+  EXPECT_EQ(104, v1.square_of_length());
+}
+
+TEST(VECTOR, SquareOfLengthVector3DFloat){
+  Vector3df v1 = {4.95, -2.24, -9.147};
+
+  EXPECT_NEAR(113.1877, v1.square_of_length(), 0.0001);
+}
+
+TEST(VECTOR, SquareOfLengthZeroVector3D){
+  Vector3df v1 = {0.0, 0.0, 0.0};
+
+  EXPECT_EQ(0, v1.square_of_length());
+}
+
+//<------------------------------------------------
+
+TEST(VECTOR, SquareOfLengthVector4D){
+  Vector4df v1 = {99.0, 2.0, 6.0, -2.0};
+
+  EXPECT_EQ(9845, v1.square_of_length());
+}
+
+TEST(VECTOR, SquareOfLengthVector4DFloat){
+  Vector4df v1 = {6.79, -4.67, 6.82, -35.731};
+
+  EXPECT_NEAR(1391.1297, v1.square_of_length(), 0.0001);
+}
+
+TEST(VECTOR, SquareOfLengthZeroVector4D){
+  Vector4df v1 = {0.0, 0.0, 0.0, 0.0};
+
+  EXPECT_EQ(0, v1.square_of_length());
+}
+
+//Product Vector
+
+TEST(VECTOR, SklaraVector2D) {
+    Vector2df v1{1.0, 2.0};
+    Vector2df v2{3.0, 4.0};
+    double result = v1 * v2;
+    EXPECT_DOUBLE_EQ(result, 11.0);
+}
+
+TEST(VECTOR, SklaraVector3D) {
+    Vector3df v1{1, 2, 3};
+    Vector3df v2{4, 5, 6};
+    int result = v1 * v2; 
+    EXPECT_EQ(result, 32);
+}
+
+TEST(VECTOR, SklaraVector4DFloat) {
+    Vector4df v1{1.0f, 0.5f, -2.0f, 3.0f};
+    Vector4df v2{2.0f, -1.0f, 0.0f, 1.0f};
+    float result = v1 * v2; 
+    EXPECT_NEAR(result, 4.5f, 1e-6);
+}
+
+TEST(VECTOR, ZeroVector) {
+    Vector3df v1{0.0f, 0.0f, 0.0f};
+    Vector3df v2{5.0f, -2.0f, 3.0f};
+    float result = v1 * v2; 
+    EXPECT_FLOAT_EQ(result, 0.0f);
+}
+
+TEST(VECTOR, NegativeValues) {
+    Vector2df  v1{-3, 4};
+    Vector2df  v2{2, -5};
+    int result = v1 * v2; 
+    EXPECT_EQ(result, -26);
+}
+
+
 }

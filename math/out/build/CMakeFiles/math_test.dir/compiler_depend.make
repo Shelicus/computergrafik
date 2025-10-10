@@ -77,9 +77,8 @@ CMakeFiles/math_test.dir/math.cc.obj: D:/Dokumente/workspace/workspace_computerg
   C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/mm_malloc.h \
   C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stddef.h \
   C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/syslimits.h \
-  D:/Dokumente/workspace_computergrafik/math/math.cc \
-  D:/Dokumente/workspace_computergrafik/math/math.h \
-  D:/Dokumente/workspace_computergrafik/math/math.tcc
+  D:/Dokumente/workspace/workspace_computergrafik/math/math.h \
+  D:/Dokumente/workspace/workspace_computergrafik/math/math.tcc
 
 CMakeFiles/math_test.dir/math_test.cc.obj: D:/Dokumente/workspace/workspace_computergrafik/math/math_test.cc \
   C:/msys64/mingw64/include/_mingw.h \
@@ -338,66 +337,65 @@ CMakeFiles/math_test.dir/math_test.cc.obj: D:/Dokumente/workspace/workspace_comp
   C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stddef.h \
   C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stdint.h \
   C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/syslimits.h \
-  D:/Dokumente/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/gtest-assertion-result.h \
-  D:/Dokumente/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/gtest-death-test.h \
-  D:/Dokumente/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/gtest-matchers.h \
-  D:/Dokumente/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/gtest-message.h \
-  D:/Dokumente/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/gtest-param-test.h \
-  D:/Dokumente/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/gtest-printers.h \
-  D:/Dokumente/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/gtest-test-part.h \
-  D:/Dokumente/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/gtest-typed-test.h \
-  D:/Dokumente/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/gtest.h \
-  D:/Dokumente/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/gtest_pred_impl.h \
-  D:/Dokumente/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/gtest_prod.h \
-  D:/Dokumente/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/internal/custom/gtest-port.h \
-  D:/Dokumente/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/internal/custom/gtest-printers.h \
-  D:/Dokumente/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/internal/gtest-death-test-internal.h \
-  D:/Dokumente/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/internal/gtest-filepath.h \
-  D:/Dokumente/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/internal/gtest-internal.h \
-  D:/Dokumente/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/internal/gtest-param-util.h \
-  D:/Dokumente/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/internal/gtest-port-arch.h \
-  D:/Dokumente/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/internal/gtest-port.h \
-  D:/Dokumente/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/internal/gtest-string.h \
-  D:/Dokumente/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/internal/gtest-type-util.h \
-  D:/Dokumente/workspace_computergrafik/math/math.h \
-  D:/Dokumente/workspace_computergrafik/math/math_test.cc
+  D:/Dokumente/workspace/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/gtest-assertion-result.h \
+  D:/Dokumente/workspace/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/gtest-death-test.h \
+  D:/Dokumente/workspace/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/gtest-matchers.h \
+  D:/Dokumente/workspace/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/gtest-message.h \
+  D:/Dokumente/workspace/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/gtest-param-test.h \
+  D:/Dokumente/workspace/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/gtest-printers.h \
+  D:/Dokumente/workspace/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/gtest-test-part.h \
+  D:/Dokumente/workspace/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/gtest-typed-test.h \
+  D:/Dokumente/workspace/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/gtest.h \
+  D:/Dokumente/workspace/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/gtest_pred_impl.h \
+  D:/Dokumente/workspace/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/gtest_prod.h \
+  D:/Dokumente/workspace/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/internal/custom/gtest-port.h \
+  D:/Dokumente/workspace/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/internal/custom/gtest-printers.h \
+  D:/Dokumente/workspace/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/internal/gtest-death-test-internal.h \
+  D:/Dokumente/workspace/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/internal/gtest-filepath.h \
+  D:/Dokumente/workspace/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/internal/gtest-internal.h \
+  D:/Dokumente/workspace/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/internal/gtest-param-util.h \
+  D:/Dokumente/workspace/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/internal/gtest-port-arch.h \
+  D:/Dokumente/workspace/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/internal/gtest-port.h \
+  D:/Dokumente/workspace/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/internal/gtest-string.h \
+  D:/Dokumente/workspace/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/internal/gtest-type-util.h \
+  D:/Dokumente/workspace/workspace_computergrafik/math/math.h
 
 
-D:/Dokumente/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/internal/gtest-type-util.h:
+D:/Dokumente/workspace/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/internal/gtest-type-util.h:
 
-D:/Dokumente/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/internal/gtest-string.h:
+D:/Dokumente/workspace/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/internal/gtest-port-arch.h:
 
-D:/Dokumente/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/internal/gtest-port.h:
+D:/Dokumente/workspace/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/internal/gtest-filepath.h:
 
-D:/Dokumente/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/internal/gtest-port-arch.h:
+D:/Dokumente/workspace/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/internal/custom/gtest-printers.h:
 
-D:/Dokumente/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/internal/gtest-filepath.h:
+D:/Dokumente/workspace/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/gtest_prod.h:
 
-D:/Dokumente/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/internal/gtest-death-test-internal.h:
+D:/Dokumente/workspace/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/gtest_pred_impl.h:
 
-D:/Dokumente/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/gtest_prod.h:
+D:/Dokumente/workspace/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/gtest-typed-test.h:
 
-D:/Dokumente/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/gtest_pred_impl.h:
+D:/Dokumente/workspace/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/gtest-test-part.h:
 
-D:/Dokumente/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/gtest-typed-test.h:
+D:/Dokumente/workspace/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/gtest-printers.h:
 
-D:/Dokumente/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/gtest-message.h:
+D:/Dokumente/workspace/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/gtest-message.h:
 
-D:/Dokumente/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/gtest-matchers.h:
+D:/Dokumente/workspace/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/gtest-matchers.h:
 
-D:/Dokumente/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/gtest-death-test.h:
-
-D:/Dokumente/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/gtest-assertion-result.h:
+D:/Dokumente/workspace/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/gtest-assertion-result.h:
 
 C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/float.h:
 
 C:/msys64/mingw64/include/wctype.h:
 
-C:/msys64/mingw64/include/wchar.h:
-
 C:/msys64/mingw64/include/c++/14.2.0/bits/memoryfwd.h:
 
 C:/msys64/mingw64/include/c++/14.2.0/bits/allocator.h:
+
+C:/msys64/mingw64/include/c++/14.2.0/bits/new_allocator.h:
+
+C:/msys64/mingw64/include/c++/14.2.0/pstl/glue_memory_defs.h:
 
 C:/msys64/mingw64/include/c++/14.2.0/bits/localefwd.h:
 
@@ -421,6 +419,12 @@ C:/msys64/mingw64/include/c++/14.2.0/cwchar:
 
 C:/msys64/mingw64/include/c++/14.2.0/bits/locale_facets.tcc:
 
+C:/msys64/mingw64/include/c++/14.2.0/bits/ostream_insert.h:
+
+D:/Dokumente/workspace/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/internal/gtest-internal.h:
+
+C:/msys64/mingw64/include/stdint.h:
+
 C:/msys64/mingw64/include/c++/14.2.0/bits/istream.tcc:
 
 C:/msys64/mingw64/include/c++/14.2.0/bits/hashtable.h:
@@ -432,6 +436,10 @@ C:/msys64/mingw64/include/c++/14.2.0/bits/cxxabi_forced.h:
 C:/msys64/mingw64/include/c++/14.2.0/bits/codecvt.h:
 
 C:/msys64/mingw64/include/c++/14.2.0/bits/chrono.h:
+
+C:/msys64/mingw64/include/c++/14.2.0/iosfwd:
+
+C:/msys64/mingw64/include/c++/14.2.0/bits/basic_string.h:
 
 C:/msys64/mingw64/include/c++/14.2.0/bits/basic_ios.tcc:
 
@@ -453,6 +461,10 @@ C:/msys64/mingw64/include/c++/14.2.0/bits/align.h:
 
 C:/msys64/mingw64/include/direct.h:
 
+C:/msys64/mingw64/include/c++/14.2.0/bits/locale_facets.h:
+
+C:/msys64/mingw64/include/c++/14.2.0/atomic:
+
 C:/msys64/mingw64/include/_mingw_stat64.h:
 
 C:/msys64/mingw64/include/_mingw_off_t.h:
@@ -461,19 +473,7 @@ C:/msys64/mingw64/include/c++/14.2.0/bits/basic_string.tcc:
 
 D:/Dokumente/workspace/workspace_computergrafik/math/math_test.cc:
 
-C:/msys64/mingw64/include/c++/14.2.0/atomic:
-
-C:/msys64/mingw64/include/c++/14.2.0/bits/locale_facets.h:
-
-C:/msys64/mingw64/include/c++/14.2.0/bits/ostream_insert.h:
-
-C:/msys64/mingw64/include/stdint.h:
-
-D:/Dokumente/workspace_computergrafik/math/math.h:
-
-C:/msys64/mingw64/include/c++/14.2.0/bits/atomic_timed_wait.h:
-
-C:/msys64/mingw64/include/c++/14.2.0/condition_variable:
+D:/Dokumente/workspace/workspace_computergrafik/math/math.tcc:
 
 C:/msys64/mingw64/include/c++/14.2.0/bits/ios_base.h:
 
@@ -489,15 +489,11 @@ C:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/time_members.h:
 
 C:/msys64/mingw64/include/math.h:
 
+D:/Dokumente/workspace/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/internal/gtest-param-util.h:
+
 C:/msys64/mingw64/include/limits.h:
 
-C:/msys64/mingw64/include/c++/14.2.0/iosfwd:
-
-C:/msys64/mingw64/include/c++/14.2.0/bits/basic_string.h:
-
-D:/Dokumente/workspace_computergrafik/math/math.cc:
-
-C:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/messages_members.h:
+D:/Dokumente/workspace/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/internal/gtest-string.h:
 
 C:/msys64/mingw64/include/corecrt.h:
 
@@ -511,13 +507,7 @@ C:/msys64/mingw64/include/c++/14.2.0/bits/locale_classes.tcc:
 
 C:/msys64/mingw64/include/sec_api/stdlib_s.h:
 
-D:/Dokumente/workspace_computergrafik/math/math_test.cc:
-
 C:/msys64/mingw64/include/corecrt_wstdlib.h:
-
-C:/msys64/mingw64/include/c++/14.2.0/pstl/glue_memory_defs.h:
-
-C:/msys64/mingw64/include/c++/14.2.0/bits/new_allocator.h:
 
 C:/msys64/mingw64/include/c++/14.2.0/bits/iterator_concepts.h:
 
@@ -537,6 +527,8 @@ C:/msys64/mingw64/include/c++/14.2.0/bits/std_abs.h:
 
 C:/msys64/mingw64/include/c++/14.2.0/bits/stl_iterator.h:
 
+D:/Dokumente/workspace/workspace_computergrafik/math/math.h:
+
 C:/msys64/mingw64/include/c++/14.2.0/bits/char_traits.h:
 
 C:/msys64/mingw64/include/c++/14.2.0/bits/atomic_base.h:
@@ -544,8 +536,6 @@ C:/msys64/mingw64/include/c++/14.2.0/bits/atomic_base.h:
 C:/msys64/mingw64/include/c++/14.2.0/bits/stl_tempbuf.h:
 
 C:/msys64/mingw64/include/malloc.h:
-
-D:/Dokumente/workspace_computergrafik/math/math.tcc:
 
 C:/msys64/mingw64/include/c++/14.2.0/bits/postypes.h:
 
@@ -558,8 +548,6 @@ C:/msys64/mingw64/include/c++/14.2.0/vector:
 C:/msys64/mingw64/include/c++/14.2.0/ext/atomicity.h:
 
 C:/msys64/mingw64/include/c++/14.2.0/backward/binders.h:
-
-D:/Dokumente/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/gtest-param-test.h:
 
 C:/msys64/mingw64/include/c++/14.2.0/bits/ranges_cmp.h:
 
@@ -649,6 +637,8 @@ C:/msys64/mingw64/include/c++/14.2.0/bits/predefined_ops.h:
 
 C:/msys64/mingw64/include/c++/14.2.0/stop_token:
 
+D:/Dokumente/workspace/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/internal/gtest-port.h:
+
 C:/msys64/mingw64/include/c++/14.2.0/cstddef:
 
 C:/msys64/mingw64/include/c++/14.2.0/bits/utility.h:
@@ -657,9 +647,11 @@ C:/msys64/mingw64/include/c++/14.2.0/cmath:
 
 C:/msys64/mingw64/include/c++/14.2.0/tr1/poly_hermite.tcc:
 
-D:/Dokumente/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/gtest-printers.h:
-
 C:/msys64/mingw64/include/c++/14.2.0/debug/debug.h:
+
+C:/msys64/mingw64/include/c++/14.2.0/bits/atomic_timed_wait.h:
+
+C:/msys64/mingw64/include/c++/14.2.0/condition_variable:
 
 C:/msys64/mingw64/include/c++/14.2.0/initializer_list:
 
@@ -693,11 +685,11 @@ C:/msys64/mingw64/include/c++/14.2.0/tr1/hypergeometric.tcc:
 
 C:/msys64/mingw64/include/c++/14.2.0/tr1/riemann_zeta.tcc:
 
+D:/Dokumente/workspace/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/gtest.h:
+
 C:/msys64/mingw64/include/c++/14.2.0/bits/std_mutex.h:
 
 C:/msys64/mingw64/include/c++/14.2.0/istream:
-
-D:/Dokumente/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/gtest-test-part.h:
 
 C:/msys64/mingw64/include/c++/14.2.0/ext/aligned_buffer.h:
 
@@ -718,8 +710,6 @@ C:/msys64/mingw64/include/_mingw_mac.h:
 C:/msys64/mingw64/include/c++/14.2.0/cstdlib:
 
 C:/msys64/mingw64/include/c++/14.2.0/bits/ostream.tcc:
-
-D:/Dokumente/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/internal/gtest-param-util.h:
 
 C:/msys64/mingw64/include/c++/14.2.0/bits/parse_numbers.h:
 
@@ -755,6 +745,8 @@ C:/msys64/mingw64/include/c++/14.2.0/bits/ptr_traits.h:
 
 C:/msys64/mingw64/include/c++/14.2.0/bits/std_thread.h:
 
+D:/Dokumente/workspace/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/internal/custom/gtest-port.h:
+
 C:/msys64/mingw64/include/c++/14.2.0/bits/erase_if.h:
 
 C:/msys64/mingw64/include/c++/14.2.0/bits/stl_bvector.h:
@@ -765,7 +757,7 @@ C:/msys64/mingw64/include/c++/14.2.0/bits/stl_multimap.h:
 
 C:/msys64/mingw64/include/c++/14.2.0/bits/stl_multiset.h:
 
-D:/Dokumente/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/internal/custom/gtest-printers.h:
+D:/Dokumente/workspace/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/gtest-param-test.h:
 
 C:/msys64/mingw64/include/c++/14.2.0/ext/numeric_traits.h:
 
@@ -788,6 +780,8 @@ C:/msys64/mingw64/include/c++/14.2.0/bits/stringfwd.h:
 C:/msys64/mingw64/include/c++/14.2.0/string:
 
 C:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++allocator.h:
+
+D:/Dokumente/workspace/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/gtest-death-test.h:
 
 C:/msys64/mingw64/include/c++/14.2.0/bits/unique_lock.h:
 
@@ -819,8 +813,6 @@ C:/msys64/mingw64/include/c++/14.2.0/optional:
 
 C:/msys64/mingw64/include/sec_api/string_s.h:
 
-D:/Dokumente/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/gtest.h:
-
 C:/msys64/mingw64/include/c++/14.2.0/bits/stl_iterator_base_funcs.h:
 
 C:/msys64/mingw64/include/pthread_signal.h:
@@ -837,11 +829,7 @@ C:/msys64/mingw64/include/c++/14.2.0/ext/string_conversions.h:
 
 C:/msys64/mingw64/include/c++/14.2.0/functional:
 
-D:/Dokumente/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/internal/custom/gtest-port.h:
-
 C:/msys64/mingw64/include/c++/14.2.0/ios:
-
-D:/Dokumente/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/internal/gtest-internal.h:
 
 C:/msys64/mingw64/include/errno.h:
 
@@ -862,6 +850,8 @@ C:/msys64/mingw64/include/c++/14.2.0/ratio:
 C:/msys64/mingw64/include/assert.h:
 
 C:/msys64/mingw64/include/c++/14.2.0/set:
+
+D:/Dokumente/workspace/workspace_computergrafik/math/extern/googletest/googletest/include/gtest/internal/gtest-death-test-internal.h:
 
 C:/msys64/mingw64/include/c++/14.2.0/sstream:
 
@@ -893,6 +883,8 @@ C:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/ctype_inline.h:
 
 C:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/gthr-default.h:
 
+C:/msys64/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/messages_members.h:
+
 C:/msys64/mingw64/include/c++/14.2.0/bits/stl_iterator_base_types.h:
 
 C:/msys64/mingw64/include/ctype.h:
@@ -922,6 +914,8 @@ C:/msys64/mingw64/include/semaphore.h:
 C:/msys64/mingw64/include/string.h:
 
 C:/msys64/mingw64/include/swprintf.inl:
+
+C:/msys64/mingw64/include/wchar.h:
 
 C:/msys64/mingw64/include/c++/14.2.0/cxxabi.h:
 

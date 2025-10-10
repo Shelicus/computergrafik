@@ -63,95 +63,95 @@ CMAKE_BINARY_DIR = D:\Dokumente\workspace\workspace_computergrafik\math\out\buil
 
 # The main recursive "all" target.
 all: CMakeFiles/math_test.dir/all
-all: extern/googletest/all
+all: googletest/all
 .PHONY : all
 
 # The main recursive "codegen" target.
 codegen: CMakeFiles/math_test.dir/codegen
-codegen: extern/googletest/codegen
+codegen: googletest/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
-preinstall: extern/googletest/preinstall
+preinstall: googletest/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/math_test.dir/clean
-clean: extern/googletest/clean
+clean: googletest/clean
 .PHONY : clean
 
 #=============================================================================
-# Directory level rules for directory extern/googletest
+# Directory level rules for directory googletest
 
 # Recursive "all" directory target.
-extern/googletest/all: extern/googletest/googlemock/all
-.PHONY : extern/googletest/all
+googletest/all: googletest/googlemock/all
+.PHONY : googletest/all
 
 # Recursive "codegen" directory target.
-extern/googletest/codegen: extern/googletest/googlemock/codegen
-.PHONY : extern/googletest/codegen
+googletest/codegen: googletest/googlemock/codegen
+.PHONY : googletest/codegen
 
 # Recursive "preinstall" directory target.
-extern/googletest/preinstall: extern/googletest/googlemock/preinstall
-.PHONY : extern/googletest/preinstall
+googletest/preinstall: googletest/googlemock/preinstall
+.PHONY : googletest/preinstall
 
 # Recursive "clean" directory target.
-extern/googletest/clean: extern/googletest/googlemock/clean
-.PHONY : extern/googletest/clean
+googletest/clean: googletest/googlemock/clean
+.PHONY : googletest/clean
 
 #=============================================================================
-# Directory level rules for directory extern/googletest/googlemock
+# Directory level rules for directory googletest/googlemock
 
 # Recursive "all" directory target.
-extern/googletest/googlemock/all: extern/googletest/googlemock/CMakeFiles/gmock.dir/all
-extern/googletest/googlemock/all: extern/googletest/googlemock/CMakeFiles/gmock_main.dir/all
-extern/googletest/googlemock/all: extern/googletest/googletest/all
-.PHONY : extern/googletest/googlemock/all
+googletest/googlemock/all: googletest/googlemock/CMakeFiles/gmock.dir/all
+googletest/googlemock/all: googletest/googlemock/CMakeFiles/gmock_main.dir/all
+googletest/googlemock/all: googletest/googletest/all
+.PHONY : googletest/googlemock/all
 
 # Recursive "codegen" directory target.
-extern/googletest/googlemock/codegen: extern/googletest/googlemock/CMakeFiles/gmock.dir/codegen
-extern/googletest/googlemock/codegen: extern/googletest/googlemock/CMakeFiles/gmock_main.dir/codegen
-extern/googletest/googlemock/codegen: extern/googletest/googletest/codegen
-.PHONY : extern/googletest/googlemock/codegen
+googletest/googlemock/codegen: googletest/googlemock/CMakeFiles/gmock.dir/codegen
+googletest/googlemock/codegen: googletest/googlemock/CMakeFiles/gmock_main.dir/codegen
+googletest/googlemock/codegen: googletest/googletest/codegen
+.PHONY : googletest/googlemock/codegen
 
 # Recursive "preinstall" directory target.
-extern/googletest/googlemock/preinstall: extern/googletest/googletest/preinstall
-.PHONY : extern/googletest/googlemock/preinstall
+googletest/googlemock/preinstall: googletest/googletest/preinstall
+.PHONY : googletest/googlemock/preinstall
 
 # Recursive "clean" directory target.
-extern/googletest/googlemock/clean: extern/googletest/googlemock/CMakeFiles/gmock.dir/clean
-extern/googletest/googlemock/clean: extern/googletest/googlemock/CMakeFiles/gmock_main.dir/clean
-extern/googletest/googlemock/clean: extern/googletest/googletest/clean
-.PHONY : extern/googletest/googlemock/clean
+googletest/googlemock/clean: googletest/googlemock/CMakeFiles/gmock.dir/clean
+googletest/googlemock/clean: googletest/googlemock/CMakeFiles/gmock_main.dir/clean
+googletest/googlemock/clean: googletest/googletest/clean
+.PHONY : googletest/googlemock/clean
 
 #=============================================================================
-# Directory level rules for directory extern/googletest/googletest
+# Directory level rules for directory googletest/googletest
 
 # Recursive "all" directory target.
-extern/googletest/googletest/all: extern/googletest/googletest/CMakeFiles/gtest.dir/all
-extern/googletest/googletest/all: extern/googletest/googletest/CMakeFiles/gtest_main.dir/all
-.PHONY : extern/googletest/googletest/all
+googletest/googletest/all: googletest/googletest/CMakeFiles/gtest.dir/all
+googletest/googletest/all: googletest/googletest/CMakeFiles/gtest_main.dir/all
+.PHONY : googletest/googletest/all
 
 # Recursive "codegen" directory target.
-extern/googletest/googletest/codegen: extern/googletest/googletest/CMakeFiles/gtest.dir/codegen
-extern/googletest/googletest/codegen: extern/googletest/googletest/CMakeFiles/gtest_main.dir/codegen
-.PHONY : extern/googletest/googletest/codegen
+googletest/googletest/codegen: googletest/googletest/CMakeFiles/gtest.dir/codegen
+googletest/googletest/codegen: googletest/googletest/CMakeFiles/gtest_main.dir/codegen
+.PHONY : googletest/googletest/codegen
 
 # Recursive "preinstall" directory target.
-extern/googletest/googletest/preinstall:
-.PHONY : extern/googletest/googletest/preinstall
+googletest/googletest/preinstall:
+.PHONY : googletest/googletest/preinstall
 
 # Recursive "clean" directory target.
-extern/googletest/googletest/clean: extern/googletest/googletest/CMakeFiles/gtest.dir/clean
-extern/googletest/googletest/clean: extern/googletest/googletest/CMakeFiles/gtest_main.dir/clean
-.PHONY : extern/googletest/googletest/clean
+googletest/googletest/clean: googletest/googletest/CMakeFiles/gtest.dir/clean
+googletest/googletest/clean: googletest/googletest/CMakeFiles/gtest_main.dir/clean
+.PHONY : googletest/googletest/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/math_test.dir
 
 # All Build rule for target.
-CMakeFiles/math_test.dir/all: extern/googletest/googletest/CMakeFiles/gtest.dir/all
-CMakeFiles/math_test.dir/all: extern/googletest/googletest/CMakeFiles/gtest_main.dir/all
+CMakeFiles/math_test.dir/all: googletest/googletest/CMakeFiles/gtest.dir/all
+CMakeFiles/math_test.dir/all: googletest/googletest/CMakeFiles/gtest_main.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\math_test.dir\build.make CMakeFiles/math_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\math_test.dir\build.make CMakeFiles/math_test.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\Dokumente\workspace\workspace_computergrafik\math\out\build\CMakeFiles --progress-num=9,10,11 "Built target math_test"
@@ -179,129 +179,129 @@ CMakeFiles/math_test.dir/clean:
 .PHONY : CMakeFiles/math_test.dir/clean
 
 #=============================================================================
-# Target rules for target extern/googletest/googlemock/CMakeFiles/gmock.dir
+# Target rules for target googletest/googlemock/CMakeFiles/gmock.dir
 
 # All Build rule for target.
-extern/googletest/googlemock/CMakeFiles/gmock.dir/all: extern/googletest/googletest/CMakeFiles/gtest.dir/all
-	$(MAKE) $(MAKESILENT) -f extern\googletest\googlemock\CMakeFiles\gmock.dir\build.make extern/googletest/googlemock/CMakeFiles/gmock.dir/depend
-	$(MAKE) $(MAKESILENT) -f extern\googletest\googlemock\CMakeFiles\gmock.dir\build.make extern/googletest/googlemock/CMakeFiles/gmock.dir/build
+googletest/googlemock/CMakeFiles/gmock.dir/all: googletest/googletest/CMakeFiles/gtest.dir/all
+	$(MAKE) $(MAKESILENT) -f googletest\googlemock\CMakeFiles\gmock.dir\build.make googletest/googlemock/CMakeFiles/gmock.dir/depend
+	$(MAKE) $(MAKESILENT) -f googletest\googlemock\CMakeFiles\gmock.dir\build.make googletest/googlemock/CMakeFiles/gmock.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\Dokumente\workspace\workspace_computergrafik\math\out\build\CMakeFiles --progress-num=1,2 "Built target gmock"
-.PHONY : extern/googletest/googlemock/CMakeFiles/gmock.dir/all
+.PHONY : googletest/googlemock/CMakeFiles/gmock.dir/all
 
 # Build rule for subdir invocation for target.
-extern/googletest/googlemock/CMakeFiles/gmock.dir/rule: cmake_check_build_system
+googletest/googlemock/CMakeFiles/gmock.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\Dokumente\workspace\workspace_computergrafik\math\out\build\CMakeFiles 4
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 extern/googletest/googlemock/CMakeFiles/gmock.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 googletest/googlemock/CMakeFiles/gmock.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\Dokumente\workspace\workspace_computergrafik\math\out\build\CMakeFiles 0
-.PHONY : extern/googletest/googlemock/CMakeFiles/gmock.dir/rule
+.PHONY : googletest/googlemock/CMakeFiles/gmock.dir/rule
 
 # Convenience name for target.
-gmock: extern/googletest/googlemock/CMakeFiles/gmock.dir/rule
+gmock: googletest/googlemock/CMakeFiles/gmock.dir/rule
 .PHONY : gmock
 
 # codegen rule for target.
-extern/googletest/googlemock/CMakeFiles/gmock.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f extern\googletest\googlemock\CMakeFiles\gmock.dir\build.make extern/googletest/googlemock/CMakeFiles/gmock.dir/codegen
-.PHONY : extern/googletest/googlemock/CMakeFiles/gmock.dir/codegen
+googletest/googlemock/CMakeFiles/gmock.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f googletest\googlemock\CMakeFiles\gmock.dir\build.make googletest/googlemock/CMakeFiles/gmock.dir/codegen
+.PHONY : googletest/googlemock/CMakeFiles/gmock.dir/codegen
 
 # clean rule for target.
-extern/googletest/googlemock/CMakeFiles/gmock.dir/clean:
-	$(MAKE) $(MAKESILENT) -f extern\googletest\googlemock\CMakeFiles\gmock.dir\build.make extern/googletest/googlemock/CMakeFiles/gmock.dir/clean
-.PHONY : extern/googletest/googlemock/CMakeFiles/gmock.dir/clean
+googletest/googlemock/CMakeFiles/gmock.dir/clean:
+	$(MAKE) $(MAKESILENT) -f googletest\googlemock\CMakeFiles\gmock.dir\build.make googletest/googlemock/CMakeFiles/gmock.dir/clean
+.PHONY : googletest/googlemock/CMakeFiles/gmock.dir/clean
 
 #=============================================================================
-# Target rules for target extern/googletest/googlemock/CMakeFiles/gmock_main.dir
+# Target rules for target googletest/googlemock/CMakeFiles/gmock_main.dir
 
 # All Build rule for target.
-extern/googletest/googlemock/CMakeFiles/gmock_main.dir/all: extern/googletest/googlemock/CMakeFiles/gmock.dir/all
-extern/googletest/googlemock/CMakeFiles/gmock_main.dir/all: extern/googletest/googletest/CMakeFiles/gtest.dir/all
-	$(MAKE) $(MAKESILENT) -f extern\googletest\googlemock\CMakeFiles\gmock_main.dir\build.make extern/googletest/googlemock/CMakeFiles/gmock_main.dir/depend
-	$(MAKE) $(MAKESILENT) -f extern\googletest\googlemock\CMakeFiles\gmock_main.dir\build.make extern/googletest/googlemock/CMakeFiles/gmock_main.dir/build
+googletest/googlemock/CMakeFiles/gmock_main.dir/all: googletest/googlemock/CMakeFiles/gmock.dir/all
+googletest/googlemock/CMakeFiles/gmock_main.dir/all: googletest/googletest/CMakeFiles/gtest.dir/all
+	$(MAKE) $(MAKESILENT) -f googletest\googlemock\CMakeFiles\gmock_main.dir\build.make googletest/googlemock/CMakeFiles/gmock_main.dir/depend
+	$(MAKE) $(MAKESILENT) -f googletest\googlemock\CMakeFiles\gmock_main.dir\build.make googletest/googlemock/CMakeFiles/gmock_main.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\Dokumente\workspace\workspace_computergrafik\math\out\build\CMakeFiles --progress-num=3,4 "Built target gmock_main"
-.PHONY : extern/googletest/googlemock/CMakeFiles/gmock_main.dir/all
+.PHONY : googletest/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Build rule for subdir invocation for target.
-extern/googletest/googlemock/CMakeFiles/gmock_main.dir/rule: cmake_check_build_system
+googletest/googlemock/CMakeFiles/gmock_main.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\Dokumente\workspace\workspace_computergrafik\math\out\build\CMakeFiles 6
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 extern/googletest/googlemock/CMakeFiles/gmock_main.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 googletest/googlemock/CMakeFiles/gmock_main.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\Dokumente\workspace\workspace_computergrafik\math\out\build\CMakeFiles 0
-.PHONY : extern/googletest/googlemock/CMakeFiles/gmock_main.dir/rule
+.PHONY : googletest/googlemock/CMakeFiles/gmock_main.dir/rule
 
 # Convenience name for target.
-gmock_main: extern/googletest/googlemock/CMakeFiles/gmock_main.dir/rule
+gmock_main: googletest/googlemock/CMakeFiles/gmock_main.dir/rule
 .PHONY : gmock_main
 
 # codegen rule for target.
-extern/googletest/googlemock/CMakeFiles/gmock_main.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f extern\googletest\googlemock\CMakeFiles\gmock_main.dir\build.make extern/googletest/googlemock/CMakeFiles/gmock_main.dir/codegen
-.PHONY : extern/googletest/googlemock/CMakeFiles/gmock_main.dir/codegen
+googletest/googlemock/CMakeFiles/gmock_main.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f googletest\googlemock\CMakeFiles\gmock_main.dir\build.make googletest/googlemock/CMakeFiles/gmock_main.dir/codegen
+.PHONY : googletest/googlemock/CMakeFiles/gmock_main.dir/codegen
 
 # clean rule for target.
-extern/googletest/googlemock/CMakeFiles/gmock_main.dir/clean:
-	$(MAKE) $(MAKESILENT) -f extern\googletest\googlemock\CMakeFiles\gmock_main.dir\build.make extern/googletest/googlemock/CMakeFiles/gmock_main.dir/clean
-.PHONY : extern/googletest/googlemock/CMakeFiles/gmock_main.dir/clean
+googletest/googlemock/CMakeFiles/gmock_main.dir/clean:
+	$(MAKE) $(MAKESILENT) -f googletest\googlemock\CMakeFiles\gmock_main.dir\build.make googletest/googlemock/CMakeFiles/gmock_main.dir/clean
+.PHONY : googletest/googlemock/CMakeFiles/gmock_main.dir/clean
 
 #=============================================================================
-# Target rules for target extern/googletest/googletest/CMakeFiles/gtest.dir
+# Target rules for target googletest/googletest/CMakeFiles/gtest.dir
 
 # All Build rule for target.
-extern/googletest/googletest/CMakeFiles/gtest.dir/all:
-	$(MAKE) $(MAKESILENT) -f extern\googletest\googletest\CMakeFiles\gtest.dir\build.make extern/googletest/googletest/CMakeFiles/gtest.dir/depend
-	$(MAKE) $(MAKESILENT) -f extern\googletest\googletest\CMakeFiles\gtest.dir\build.make extern/googletest/googletest/CMakeFiles/gtest.dir/build
+googletest/googletest/CMakeFiles/gtest.dir/all:
+	$(MAKE) $(MAKESILENT) -f googletest\googletest\CMakeFiles\gtest.dir\build.make googletest/googletest/CMakeFiles/gtest.dir/depend
+	$(MAKE) $(MAKESILENT) -f googletest\googletest\CMakeFiles\gtest.dir\build.make googletest/googletest/CMakeFiles/gtest.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\Dokumente\workspace\workspace_computergrafik\math\out\build\CMakeFiles --progress-num=5,6 "Built target gtest"
-.PHONY : extern/googletest/googletest/CMakeFiles/gtest.dir/all
+.PHONY : googletest/googletest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
-extern/googletest/googletest/CMakeFiles/gtest.dir/rule: cmake_check_build_system
+googletest/googletest/CMakeFiles/gtest.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\Dokumente\workspace\workspace_computergrafik\math\out\build\CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 extern/googletest/googletest/CMakeFiles/gtest.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 googletest/googletest/CMakeFiles/gtest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\Dokumente\workspace\workspace_computergrafik\math\out\build\CMakeFiles 0
-.PHONY : extern/googletest/googletest/CMakeFiles/gtest.dir/rule
+.PHONY : googletest/googletest/CMakeFiles/gtest.dir/rule
 
 # Convenience name for target.
-gtest: extern/googletest/googletest/CMakeFiles/gtest.dir/rule
+gtest: googletest/googletest/CMakeFiles/gtest.dir/rule
 .PHONY : gtest
 
 # codegen rule for target.
-extern/googletest/googletest/CMakeFiles/gtest.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f extern\googletest\googletest\CMakeFiles\gtest.dir\build.make extern/googletest/googletest/CMakeFiles/gtest.dir/codegen
-.PHONY : extern/googletest/googletest/CMakeFiles/gtest.dir/codegen
+googletest/googletest/CMakeFiles/gtest.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f googletest\googletest\CMakeFiles\gtest.dir\build.make googletest/googletest/CMakeFiles/gtest.dir/codegen
+.PHONY : googletest/googletest/CMakeFiles/gtest.dir/codegen
 
 # clean rule for target.
-extern/googletest/googletest/CMakeFiles/gtest.dir/clean:
-	$(MAKE) $(MAKESILENT) -f extern\googletest\googletest\CMakeFiles\gtest.dir\build.make extern/googletest/googletest/CMakeFiles/gtest.dir/clean
-.PHONY : extern/googletest/googletest/CMakeFiles/gtest.dir/clean
+googletest/googletest/CMakeFiles/gtest.dir/clean:
+	$(MAKE) $(MAKESILENT) -f googletest\googletest\CMakeFiles\gtest.dir\build.make googletest/googletest/CMakeFiles/gtest.dir/clean
+.PHONY : googletest/googletest/CMakeFiles/gtest.dir/clean
 
 #=============================================================================
-# Target rules for target extern/googletest/googletest/CMakeFiles/gtest_main.dir
+# Target rules for target googletest/googletest/CMakeFiles/gtest_main.dir
 
 # All Build rule for target.
-extern/googletest/googletest/CMakeFiles/gtest_main.dir/all: extern/googletest/googletest/CMakeFiles/gtest.dir/all
-	$(MAKE) $(MAKESILENT) -f extern\googletest\googletest\CMakeFiles\gtest_main.dir\build.make extern/googletest/googletest/CMakeFiles/gtest_main.dir/depend
-	$(MAKE) $(MAKESILENT) -f extern\googletest\googletest\CMakeFiles\gtest_main.dir\build.make extern/googletest/googletest/CMakeFiles/gtest_main.dir/build
+googletest/googletest/CMakeFiles/gtest_main.dir/all: googletest/googletest/CMakeFiles/gtest.dir/all
+	$(MAKE) $(MAKESILENT) -f googletest\googletest\CMakeFiles\gtest_main.dir\build.make googletest/googletest/CMakeFiles/gtest_main.dir/depend
+	$(MAKE) $(MAKESILENT) -f googletest\googletest\CMakeFiles\gtest_main.dir\build.make googletest/googletest/CMakeFiles/gtest_main.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\Dokumente\workspace\workspace_computergrafik\math\out\build\CMakeFiles --progress-num=7,8 "Built target gtest_main"
-.PHONY : extern/googletest/googletest/CMakeFiles/gtest_main.dir/all
+.PHONY : googletest/googletest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
-extern/googletest/googletest/CMakeFiles/gtest_main.dir/rule: cmake_check_build_system
+googletest/googletest/CMakeFiles/gtest_main.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\Dokumente\workspace\workspace_computergrafik\math\out\build\CMakeFiles 4
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 extern/googletest/googletest/CMakeFiles/gtest_main.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 googletest/googletest/CMakeFiles/gtest_main.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\Dokumente\workspace\workspace_computergrafik\math\out\build\CMakeFiles 0
-.PHONY : extern/googletest/googletest/CMakeFiles/gtest_main.dir/rule
+.PHONY : googletest/googletest/CMakeFiles/gtest_main.dir/rule
 
 # Convenience name for target.
-gtest_main: extern/googletest/googletest/CMakeFiles/gtest_main.dir/rule
+gtest_main: googletest/googletest/CMakeFiles/gtest_main.dir/rule
 .PHONY : gtest_main
 
 # codegen rule for target.
-extern/googletest/googletest/CMakeFiles/gtest_main.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f extern\googletest\googletest\CMakeFiles\gtest_main.dir\build.make extern/googletest/googletest/CMakeFiles/gtest_main.dir/codegen
-.PHONY : extern/googletest/googletest/CMakeFiles/gtest_main.dir/codegen
+googletest/googletest/CMakeFiles/gtest_main.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f googletest\googletest\CMakeFiles\gtest_main.dir\build.make googletest/googletest/CMakeFiles/gtest_main.dir/codegen
+.PHONY : googletest/googletest/CMakeFiles/gtest_main.dir/codegen
 
 # clean rule for target.
-extern/googletest/googletest/CMakeFiles/gtest_main.dir/clean:
-	$(MAKE) $(MAKESILENT) -f extern\googletest\googletest\CMakeFiles\gtest_main.dir\build.make extern/googletest/googletest/CMakeFiles/gtest_main.dir/clean
-.PHONY : extern/googletest/googletest/CMakeFiles/gtest_main.dir/clean
+googletest/googletest/CMakeFiles/gtest_main.dir/clean:
+	$(MAKE) $(MAKESILENT) -f googletest\googletest\CMakeFiles\gtest_main.dir\build.make googletest/googletest/CMakeFiles/gtest_main.dir/clean
+.PHONY : googletest/googletest/CMakeFiles/gtest_main.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

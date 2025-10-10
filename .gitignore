@@ -1,2 +1,13 @@
 math/CMakeCache.txt
 math/FileContentIndex/.
+.vscode
+math/.vs
+math/.vscode
+*.VC.db
+*.ipch
+.vs/
+CMakeCache.txt
+geometry/extern
+math/extern
+math/out
+geometry/out
