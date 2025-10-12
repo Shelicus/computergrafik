@@ -25,7 +25,7 @@ struct Intersection_Context {
 };
 
 
-// calculates the refracted rays direction (transmission) for the rays direction und a surface normal
+// calculates the refracted rays direction (transmission) for the rays direction and a surface normal
 // refraction_index is the quotient of the outside and inside material density 
 // returns true if transmission occurs
 // return false if total internal reflection occurs (no transmission  in this case).
@@ -84,7 +84,7 @@ protected:
 public:
   Sphere(Vector<FLOAT,N> center, FLOAT radius);
   
-  // returns true iff the given ray intersects this sphere
+  // returns true if the given ray intersects this sphere
   // context.intersection is set to the intersection point,
   // context.normal is set to the intersection normal facing away from the surface
   // context.t is set to the value with: ray.origin + t * ray.direction == intersection
@@ -94,15 +94,11 @@ public:
   // t is zero if no intersection occured
   FLOAT intersects(const Ray<FLOAT, N> &ray) const;
 
-  // returns true iff this Sphere intersects with the given sphere
-  /*
+  // returns true if this Sphere intersects with the given sphere
   bool intersects(Sphere<FLOAT, N> sphere) const;
-  */
   
-  // returns true iff the given point is inside this Sphere or on its surface
-  /*
+  // returns true if the given point is inside this Sphere or on its surface
   bool inside(const Vector<FLOAT, N> p) const;
-  */
 };
 
 template <class FLOAT, size_t N>

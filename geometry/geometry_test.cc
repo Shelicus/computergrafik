@@ -135,7 +135,7 @@ TEST(AABB, SweepIntersects2df_5) {
   EXPECT_NEAR(0.0, normal[1], 0.00001);
 }
 
-/*
+
 TEST(SPHERE, Intersects2dfWithSphere_1) {
   Sphere2df sphere1 = { {0.0, 0.0}, 1.0 };
   Sphere2df sphere2 = { {1.0, 1.0}, 0.5 };
@@ -149,9 +149,7 @@ TEST(SPHERE, Intersects2dfWithSphere_2) {
   
   EXPECT_FALSE( sphere1.intersects(sphere2) );
 }
-*/
 
-/*
 TEST(SPHERE, Intersects2dfWithRay_1) {
   Sphere2df sphere = { {0.0, 0.0}, 1.0 };
   Ray2df ray{ {-2.0, -3.0}, {1.0, 1.0} };
@@ -253,9 +251,7 @@ TEST(SPHERE, Intersects3dfWithRay_7) {
   EXPECT_TRUE( sphere.intersects(ray, context) );
 }
 
-*/
 
-/*
 TEST(SPHERE, Inside_1) {
   Sphere3df sphere = { {3.0f, 3.0f, 0.0f}, 3.0f };
   
@@ -267,7 +263,7 @@ TEST(SPHERE, NotInside_1) {
   
   EXPECT_FALSE( sphere.inside( Vector3df{-0.5f, 0.0f, 0.0f}) );
 }
-*/
+
 TEST(TRIANGLE, Intersects3dfWithRay_1) {
   Triangle3df triangle = { {0.0, 0.0, 0.0}, {0.0, 3.0, 0.0},{3.0, 0.0, 0.0}  };
   Ray3df ray{ {0.0, 0.0, 2.0}, {0.0, 0.0, -1.0} };
@@ -430,6 +426,123 @@ TEST(FRESNEL, Refract_1) {
   EXPECT_NEAR(-1.0f, transmission[1], 0.00001);
   EXPECT_NEAR( 0.0f, transmission[2], 0.00001);
 }
+
+//Implemented TESTs
+
+//Intersects
+//3D
+TEST(SPHERE, SpheresDoNotTouch) {
+    Sphere3df a({0, 0}, 1.0f);
+    Sphere3df b({3, 0}, 1.0f);
+
+    EXPECT_FALSE(a.intersects(b));
+}
+
+TEST(SPHERE, SpheresTouchExactly) {
+    Sphere3df a({0, 0, 0}, 1.0f);
+    Sphere3df b({2, 0, 0}, 1.0f);
+
+    EXPECT_TRUE(a.intersects(b));
+}
+
+TEST(SPHERE, SpheresOverlap) {
+    Sphere3df a({0, 0, 0}, 1.5f);
+    Sphere3df b({2, 0, 0}, 1.0f);
+
+    EXPECT_TRUE(a.intersects(b));
+}
+
+TEST(SPHERE, SpheresAreIdentical) {
+    Sphere3df a({0, 0, 0}, 1.0f);
+    Sphere3df b({0, 0, 0}, 1.0f);
+
+    EXPECT_TRUE(a.intersects(b));
+}
+
+TEST(SPHERE, OneInsideAnother) {
+    Sphere3df a({0, 0, 0}, 5.0f);
+    Sphere3df b({1, 1, 1}, 1.0f);
+
+    EXPECT_TRUE(a.intersects(b));
+}
+
+//2D
+TEST(SPHERE, SpheresDoNotTouch2D) {
+    Sphere2df a({0, 0}, 1.0f);
+    Sphere2df b({3, 0}, 1.0f);
+
+    EXPECT_FALSE(a.intersects(b));
+}
+
+TEST(SPHERE, SpheresTouchExactly2D) {
+    Sphere2df a({0, 0}, 1.0f);
+    Sphere2df b({2, 0}, 1.0f);
+
+    EXPECT_TRUE(a.intersects(b));
+}
+
+TEST(SPHERE, SpheresOverlap2D) {
+    Sphere2df a({0, 0}, 1.5f);
+    Sphere2df b({2, 0}, 1.0f);
+
+    EXPECT_TRUE(a.intersects(b));
+}
+
+TEST(SPHERE, SpheresAreIdentical2D) {
+    Sphere2df a({0, 0}, 1.0f);
+    Sphere2df b({0, 0}, 1.0f);
+
+    EXPECT_TRUE(a.intersects(b));
+}
+
+TEST(SPHERE, OneInsideAnother2D) {
+    Sphere2df a({0, 0}, 5.0f);
+    Sphere2df b({1, 1}, 1.0f);
+
+    EXPECT_TRUE(a.intersects(b));
+}
+
+//<----------------------------------------
+//Inside
+
+//3D
+TEST(SPHERE, PointInside3D) {
+    Sphere3df s({0, 0, 0}, 2.0f);
+    Vector<float, 3> p{1, 1, 0};
+    EXPECT_TRUE(s.inside(p));
+}
+
+TEST(SPHERE, PointOnSurface3D) {
+    Sphere3df s({0, 0, 0}, 2.0f);
+    Vector<float, 3> p{2, 0, 0};
+    EXPECT_TRUE(s.inside(p));
+}
+
+TEST(SPHERE, PointOutside3D) {
+    Sphere3df s({0, 0, 0}, 2.0f);
+    Vector<float, 3> p{3, 0, 0};
+    EXPECT_FALSE(s.inside(p)); 
+}
+
+//2D
+TEST(SPHERE, PointInside2D) {
+    Sphere2df s({0, 0}, 2.0f);
+    Vector<float, 2> p{1, 1};
+    EXPECT_TRUE(s.inside(p));
+}
+
+TEST(SPHERE, PointOnSurface2D) {
+    Sphere2df s({0, 0}, 2.0f);
+    Vector<float, 2> p{2, 0};
+    EXPECT_TRUE(s.inside(p));
+}
+
+TEST(SPHERE, PointOutside2D) {
+    Sphere2df s({0, 0}, 2.0f);
+    Vector<float, 2> p{3, 0};
+    EXPECT_FALSE(s.inside(p)); 
+}
+
 
 
 
