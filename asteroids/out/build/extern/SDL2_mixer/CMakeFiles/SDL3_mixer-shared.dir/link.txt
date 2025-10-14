@@ -1,0 +1,3 @@
+C:\msys64\mingw64\bin\cmake.exe -E rm -f CMakeFiles\SDL3_mixer-shared.dir/objects.a
+C:\msys64\mingw64\bin\ar.exe qc CMakeFiles\SDL3_mixer-shared.dir/objects.a @CMakeFiles\SDL3_mixer-shared.dir\objects1.rsp
+C:\msys64\mingw64\bin\cc.exe -static-libgcc -Wl,--version-script=D:/Dokumente/workspace/workspace_computergrafik/extern/SDL2_mixer/src/SDL_mixer.sym -Wl,--no-undefined -shared -o SDL3_mixer.dll -Wl,--out-implib,libSDL3_mixer.dll.a -Wl,--major-image-version,0,--minor-image-version,1 -Wl,--whole-archive CMakeFiles\SDL3_mixer-shared.dir/objects.a -Wl,--no-whole-archive @CMakeFiles\SDL3_mixer-shared.dir\linkLibs.rsp
