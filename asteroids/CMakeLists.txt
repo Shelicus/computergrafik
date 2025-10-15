@@ -8,7 +8,7 @@ add_compile_options(-g -Wall -Wextra -Wpedantic -Wl,--stack,16777216)
 
 # --- GoogleTest ---
 add_subdirectory(
-    "D:/Dokumente/workspace/workspace_computergrafik/extern/googletest"
+    "C:/Dokumente/workspace/computergrafik/extern/googletest"
     "${CMAKE_BINARY_DIR}/googletest"
 )
 
@@ -21,7 +21,7 @@ find_package(SDL2_mixer REQUIRED)
 
 
 add_executable(main_game game.cc math.cc geometry.cc sdl2_renderer.cc sound.cc main_game.cc physics.cc sdl2_game_controller.cc timer.cc)
-target_link_libraries(main_game mingw32 SDL2::SDL2main SDL2::SDL2 SDL2_mixer::SDL2_mixer)
+target_link_libraries(main_game SDL2::SDL2 SDL2_mixer::SDL2_mixer)
 
 enable_testing()
 add_executable(math_test math_test.cc math.cc)

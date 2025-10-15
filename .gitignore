@@ -6,7 +6,10 @@ math/.vscode
 *.VC.db
 *.ipch
 .vs/
-CMakeCache.txt
+math/CMakeCache.txt
+math/CMakeLists.txt
+geometry/CMakeLists.txt
+geometry/CMakeLists.txt
 geometry/extern
 math/extern
 math/out

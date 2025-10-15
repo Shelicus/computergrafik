@@ -7,7 +7,7 @@ void SDL2Renderer::renderSpaceship(Vector2df position, float angle) {
     static std::array<SDL_Point, 6> ship_points{SDL_Point{-6, 3},
                                               SDL_Point{-6,-3},
                                               SDL_Point{-10,-6},
-                                              SDL_Point{ 14, 0},
+                                              SDL_Point{ 50, 0}, //überprüfen ob die Treffer noch passen
                                               SDL_Point{-10, 6},
                                               SDL_Point{-6, 3}};
   
@@ -87,6 +87,7 @@ void SDL2Renderer::render(Asteroid * asteroid) {
   static SDL_Point asteroids_points4[] = {  
     {8,0}, {32,-6}, {32, -12}, {8, -24}, {-16, -24}, {-8, -12}, {-32, -12}, {-32, 12}, {-16, 24}, {8, 16}, {16, 24}, {32, 12}, {8, 0}
   };
+  
   static size_t sizes[] = {std::span{asteroids_points1}.size(),
                            std::span{asteroids_points2}.size(),
                            std::span{asteroids_points3}.size(),

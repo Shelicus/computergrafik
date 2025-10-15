@@ -7,7 +7,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 add_compile_options(-g -Wall -Wextra -Wpedantic -Wl,--stack,16777216)
 
 add_subdirectory(
-    "D:/Dokumente/workspace/workspace_computergrafik/extern/googletest"
+    "C:/Dokumente/workspace/computergrafik/extern/googletest"
     "${CMAKE_BINARY_DIR}/googletest"
 )
 

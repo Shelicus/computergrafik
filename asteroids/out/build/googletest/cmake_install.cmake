@@ -1,4 +1,4 @@
-# Install script for directory: D:/Dokumente/workspace/workspace_computergrafik/extern/googletest
+# Install script for directory: C:/Dokumente/workspace/computergrafik/extern/googletest
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,12 +39,12 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("D:/Dokumente/workspace/workspace_computergrafik/asteroids/out/build/googletest/googlemock/cmake_install.cmake")
+  include("C:/Dokumente/workspace/computergrafik/asteroids/out/build/googletest/googlemock/cmake_install.cmake")
 endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "D:/Dokumente/workspace/workspace_computergrafik/asteroids/out/build/googletest/install_local_manifest.txt"
+  file(WRITE "C:/Dokumente/workspace/computergrafik/asteroids/out/build/googletest/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
