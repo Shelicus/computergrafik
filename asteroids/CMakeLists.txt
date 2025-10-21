@@ -8,15 +8,14 @@ add_compile_options(-g -Wall -Wextra -Wpedantic -Wl,--stack,16777216)
 
 # --- GoogleTest ---
 add_subdirectory(
-    "C:/Dokumente/workspace/computergrafik/extern/googletest"
+    "D:/Dokumente/workspace/workspace_computergrafik/extern/googletest"
     "${CMAKE_BINARY_DIR}/googletest"
 )
 
 
-#set(SDL2_DIR "D:/Dokumente/workspace/workspace_computergrafik/extern/SDL2/cmake")
 find_package(SDL2 REQUIRED)
 
-#set(SDL_mixer_DIR "D:/Dokumente/workspace/workspace_computergrafik/extern/SDL2_mixer/cmake")
+
 find_package(SDL2_mixer REQUIRED)
 
 

@@ -1,1 +1,1 @@
--isystem C:/Dokumente/workspace/computergrafik/extern/googletest/googletest/include -isystem C:/Dokumente/workspace/computergrafik/extern/googletest/googletest -isystem "C:/Dokumente/workspace/computergrafik/extern/SDL2/x86_64-w64-mingw32/include/SDL2"
+-isystem D:/Dokumente/workspace/workspace_computergrafik/extern/googletest/googletest/include -isystem D:/Dokumente/workspace/workspace_computergrafik/extern/googletest/googletest -isystem "D:/Dokumente/workspace/workspace_computergrafik/extern/SDL2/x86_64-w64-mingw32/include/SDL2"

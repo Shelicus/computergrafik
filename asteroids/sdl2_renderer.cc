@@ -7,7 +7,7 @@ void SDL2Renderer::renderSpaceship(Vector2df position, float angle) {
     static std::array<SDL_Point, 6> ship_points{SDL_Point{-6, 3},
                                               SDL_Point{-6,-3},
                                               SDL_Point{-10,-6},
-                                              SDL_Point{ 50, 0}, //überprüfen ob die Treffer noch passen
+                                              SDL_Point{ 50, 0}, 
                                               SDL_Point{-10, 6},
                                               SDL_Point{-6, 3}};
   
@@ -21,7 +21,9 @@ void SDL2Renderer::renderSpaceship(Vector2df position, float angle) {
     points[i].x = (cos_angle * x - sin_angle * y) + position[0];
     points[i].y = (sin_angle * x + cos_angle * y) + position[1];
   }
+  SDL_SetRenderDrawColor( renderer, 0xFF, 0x40, 0x40, 0xFF );
   SDL_RenderDrawLines(renderer, points.data(), points.size());
+  SDL_SetRenderDrawColor( renderer, 0xFF, 0xFF, 0xFF, 0xFF );
 
 }
 
@@ -85,18 +87,30 @@ void SDL2Renderer::render(Asteroid * asteroid) {
     {-16, 0}, {-32, 6}, {-16, 24}, {0, 6}, {0, 24}, {16, 24}, {32, 6}, {32, 6}, {16, -24}, {-8, -24}, {-32, -6}, {-16, 0}
   };
   static SDL_Point asteroids_points4[] = {  
-    {8,0}, {32,-6}, {32, -12}, {8, -24}, {-16, -24}, {-8, -12}, {-32, -12}, {-32, 12}, {-16, 24}, {8, 16}, {16, 24}, {32, 12}, {8, 0}
+    {0, 0}, {0,24}, {24,24}, {24, 0}, {0,0}, {0, 12}, {24, 12}, {12,12}, {12,24}, {12, 0}, {0,0}
   };
+  
   
   static size_t sizes[] = {std::span{asteroids_points1}.size(),
                            std::span{asteroids_points2}.size(),
                            std::span{asteroids_points3}.size(),
-                           std::span{asteroids_points4}.size() };
+                           std::span{asteroids_points4}.size(),
+                          };
   size_t size = sizes[ asteroid->get_rock_type() ];
+  SDL_SetRenderDrawColor( renderer, 0xFF, 0xFF, 0x00, 0xFF );
   SDL_Point * asteroids_points = asteroids_points1;
-  if ( asteroid->get_rock_type() == 1 ) asteroids_points = asteroids_points2;
-  if ( asteroid->get_rock_type() == 2 ) asteroids_points = asteroids_points3;
-  if ( asteroid->get_rock_type() == 3 ) asteroids_points = asteroids_points4;
+  if ( asteroid->get_rock_type() == 1 ){
+    SDL_SetRenderDrawColor( renderer, 0xFF, 0xBB, 0xAA, 0xFF );
+    asteroids_points = asteroids_points2;
+  };
+  if ( asteroid->get_rock_type() == 2 ){
+    SDL_SetRenderDrawColor( renderer, 0xFF, 0x00, 0xFF, 0xFF );
+    asteroids_points = asteroids_points3;
+  };
+  if ( asteroid->get_rock_type() == 3 ){
+    SDL_SetRenderDrawColor( renderer, 0x00, 0xFF, 0xFF, 0xFF );
+    asteroids_points = asteroids_points4;
+  }
  
   SDL_Point points[std::span{asteroids_points4}.size()];
   
@@ -107,6 +121,7 @@ void SDL2Renderer::render(Asteroid * asteroid) {
     points[i].y = scale * asteroids_points[i].y + position[1];
   }
   SDL_RenderDrawLines(renderer, points, size);
+  SDL_SetRenderDrawColor( renderer, 0xFF, 0xFF, 0xFF, 0xFF );
 }
 
 
@@ -205,9 +220,9 @@ void SDL2Renderer::renderScore() {
       points[i].y = y +  4 * (digits[d] + i)->y;
     }
     x -= 20;
-//    SDL_SetRenderDrawColor( renderer, 0xFF, 0xFF, 0x00, 0xFF );
+    SDL_SetRenderDrawColor( renderer, 0xFF, 0xFF, 0x00, 0xFF );
     SDL_RenderDrawLines(renderer, points.data(), size );
-//    SDL_SetRenderDrawColor( renderer, 0xFF, 0xFF, 0xFF, 0xFF );
+    SDL_SetRenderDrawColor( renderer, 0xFF, 0xFF, 0xFF, 0xFF );
     no_of_digits--;
   } while (no_of_digits > 0);
 }

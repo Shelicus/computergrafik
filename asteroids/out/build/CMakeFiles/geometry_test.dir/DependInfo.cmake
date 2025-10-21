@@ -8,9 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Dokumente/workspace/computergrafik/asteroids/geometry.cc" "CMakeFiles/geometry_test.dir/geometry.cc.obj" "gcc" "CMakeFiles/geometry_test.dir/geometry.cc.obj.d"
-  "C:/Dokumente/workspace/computergrafik/asteroids/geometry_test.cc" "CMakeFiles/geometry_test.dir/geometry_test.cc.obj" "gcc" "CMakeFiles/geometry_test.dir/geometry_test.cc.obj.d"
-  "C:/Dokumente/workspace/computergrafik/asteroids/math.cc" "CMakeFiles/geometry_test.dir/math.cc.obj" "gcc" "CMakeFiles/geometry_test.dir/math.cc.obj.d"
+  "D:/Dokumente/workspace/workspace_computergrafik/asteroids/geometry.cc" "CMakeFiles/geometry_test.dir/geometry.cc.obj" "gcc" "CMakeFiles/geometry_test.dir/geometry.cc.obj.d"
+  "D:/Dokumente/workspace/workspace_computergrafik/asteroids/geometry_test.cc" "CMakeFiles/geometry_test.dir/geometry_test.cc.obj" "gcc" "CMakeFiles/geometry_test.dir/geometry_test.cc.obj.d"
+  "D:/Dokumente/workspace/workspace_computergrafik/asteroids/math.cc" "CMakeFiles/geometry_test.dir/math.cc.obj" "gcc" "CMakeFiles/geometry_test.dir/math.cc.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

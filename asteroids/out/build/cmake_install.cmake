@@ -1,4 +1,4 @@
-# Install script for directory: C:/Dokumente/workspace/computergrafik/asteroids
+# Install script for directory: D:/Dokumente/workspace/workspace_computergrafik/asteroids
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,14 +39,14 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Dokumente/workspace/computergrafik/asteroids/out/build/googletest/cmake_install.cmake")
+  include("D:/Dokumente/workspace/workspace_computergrafik/asteroids/out/build/googletest/cmake_install.cmake")
 
 endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "C:/Dokumente/workspace/computergrafik/asteroids/out/build/install_local_manifest.txt"
+  file(WRITE "D:/Dokumente/workspace/workspace_computergrafik/asteroids/out/build/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
 if(CMAKE_INSTALL_COMPONENT)
@@ -62,6 +62,6 @@ else()
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "C:/Dokumente/workspace/computergrafik/asteroids/out/build/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "D:/Dokumente/workspace/workspace_computergrafik/asteroids/out/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
