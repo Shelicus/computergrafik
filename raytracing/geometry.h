@@ -94,7 +94,7 @@ public:
   // t is zero if no intersection occured
   FLOAT intersects(const Ray<FLOAT, N> &ray) const;
 
-  // returns true if this Sphere intersects with the given sphere
+  // returns true if this Sphere intersects with the given sphere -> schneidet
   bool intersects(Sphere<FLOAT, N> sphere) const;
   
   // returns true if the given point is inside this Sphere or on its surface

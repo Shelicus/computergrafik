@@ -11,8 +11,9 @@ add_subdirectory(
     "${CMAKE_BINARY_DIR}/googletest"
 )
 
-add_executable(math_test math_test.cc math.cc)
-target_link_libraries(math_test gtest gtest_main)
-add_executable(geometry_test geometry_test.cc geometry.cc math.cc)
-target_link_libraries(geometry_test gtest gtest_main)
+find_package(SDL2 REQUIRED)
+
+
+add_executable(raytracer raytracer.cc geometry.cc math.cc Screen.cc Camera.cc)
+target_link_libraries(raytracer SDL2::SDL2)
 
