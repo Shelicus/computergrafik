@@ -55,19 +55,17 @@ struct SceneObject {
     SceneObject(Vector3df c, float r, Material m) 
         : type(SPHERE_OBJ), 
           sphere(c, r), 
-          // FIX: Geschweifte Klammern {} für den Vector Konstruktor nutzen!
           plane({ Vector3df{0.0f, 0.0f, 0.0f}, Vector3df{0.0f, 1.0f, 0.0f} }), 
           material(m) {}
 
-    // Konstruktor für Ebene
+    // Konstruktor für Wand
     SceneObject(Vector3df pos, Vector3df norm, Material m) 
         : type(PLANE_OBJ), 
-          // FIX: Geschweifte Klammern {} für den Vector Konstruktor nutzen!
           sphere(Vector3df{0.0f, 0.0f, 0.0f}, 0.0f), 
           plane({pos, norm}), 
           material(m) {}
 
-    // ... hier deine intersects Methode ...
+
     bool intersects(const Ray3df& ray, Intersection_Context<float, 3u>& ctx) const {
         if (type == SPHERE_OBJ) {
             return sphere.intersects(ray, ctx);
@@ -127,13 +125,13 @@ std::vector<SceneObject> createScene() {
     float roomDepth = 20.0f;
     float roomHeight = 20.0f;
 
-    // Linke Wand (Rot) -> Position x=-10, Normale zeigt nach rechts (1,0,0)
+    // Linke Wand  -> Position x=-10, Normale zeigt nach rechts (1,0,0)
     scene.emplace_back(Vector3df{-roomWidth, 0, 0}, Vector3df{1, 0, 0}, matLeft);
 
-    // Rechte Wand (Grün) -> Position x=10, Normale zeigt nach links (-1,0,0)
+    // Rechte Wand  -> Position x=10, Normale zeigt nach links (-1,0,0)
     scene.emplace_back(Vector3df{ roomWidth, 0, 0}, Vector3df{-1, 0, 0}, matRight);
 
-    // Rückwand (Weiß) -> Position z=-20, Normale zeigt nach vorne (0,0,1)
+    // Rückwand  -> Position z=-20, Normale zeigt nach vorne (0,0,1)
     scene.emplace_back(Vector3df{0, 0, -roomDepth}, Vector3df{0, 0, 1}, matWhite);
 
     // Boden -> Position y=0, Normale zeigt nach oben (0,1,0)
@@ -145,22 +143,22 @@ std::vector<SceneObject> createScene() {
 
 
     
-    float sphereRadius = 2.0f;      // Kleiner (vorher 3.0)
-    float sphereY = sphereRadius;   // Steht auf dem Boden (y=0 + Radius)
+    float sphereRadius = 2.0f;     
+    float sphereY = sphereRadius;   // => Kugel y=0
 
-    // AMBIENT Kugel (Links)
+    // AMBIENT Kugel Links
     Material matAmbient = { {0.0f, 1.0f, 1.0f}, 1.0f, 0.0f, 0.0f, 0.0f}; 
-    // Position: Etwas nach links (-4), auf dem Boden
+
     scene.emplace_back(Vector3df{-4.5f, sphereY, -2.0f}, sphereRadius, matAmbient);
 
-    // DIFFUSE Kugel (Mitte)
+    // DIFFUSE Kugel Mitte
     Material matDiffuse = { {1.0f, 1.0f, 0.0f}, 0.1f, 0.9f, 0.0f, 0.0f };
  
     scene.emplace_back(Vector3df{0.0f, sphereY, 3.0f}, sphereRadius, matDiffuse);
 
-    // REFLEKTIVE Kugel (Rechts) - Spiegel
+    // REFLEKTIVE Kugel Rechts - Spiegel
     Material matReflect = { {0.9f, 0.9f, 0.9f}, 0.0f, 0.1f, 0.9f, 0.0f }; 
-    // Position: Etwas nach rechts (4.5), auf dem Boden
+   
     scene.emplace_back(Vector3df{4.5f, sphereY, -2.0f}, sphereRadius, matReflect);
 
     return scene;
@@ -178,6 +176,7 @@ Vector3df trace(const Ray3df& ray, const std::vector<SceneObject>& scene, const 
         Intersection_Context<float, 3u> ctx;
     
         if (obj.intersects(ray, ctx)) {
+            //check ob Schnittpunkt kleiner als  bisher Gefunden
             if (ctx.t > 0.001f && ctx.t < closestT) {
                 closestT = ctx.t;
                 hitObject = &obj;
@@ -213,9 +212,10 @@ Vector3df trace(const Ray3df& ray, const std::vector<SceneObject>& scene, const 
         Vector3df shadowOrigin = hitPoint + (shadowBias * normal);
         Ray3df shadowRay = { shadowOrigin, lightDir};
         
+        //Shatten berechnen
         for (const auto& obj : scene) {
             Intersection_Context<float, 3u> shadowCtx;
-            if (obj.intersects(shadowRay, shadowCtx)) { // Generischer Check
+            if (obj.intersects(shadowRay, shadowCtx)) { 
                 if (shadowCtx.t > 0.0f && shadowCtx.t < distToLight) {
                     inShadow = true;
                     break; 
@@ -224,7 +224,7 @@ Vector3df trace(const Ray3df& ray, const std::vector<SceneObject>& scene, const 
         }
 
         if (!inShadow) {
-            float NdotL = normal * lightDir; 
+            float NdotL = normal * lightDir;  //Lambert
             if (NdotL > 0) {
                 // Diffus
                 Vector3df diffuseComponent = { 
@@ -232,7 +232,9 @@ Vector3df trace(const Ray3df& ray, const std::vector<SceneObject>& scene, const 
                     light.color[1] * mat.color[1], 
                     light.color[2] * mat.color[2] 
                 };
-                finalColor += NdotL * (mat.k_diffuse * diffuseComponent);
+                float factor = 1.0f / static_cast<float>(lights.size()); //Beleuchtung teilen durch Lights
+                finalColor += factor * (NdotL * (mat.k_diffuse * diffuseComponent)); // adding to color
+
 
                 // Specular
                 if (mat.shininess > 0.0f) {
