@@ -21,7 +21,6 @@ public:
         }
     }
 
-    // Ausgabe als PPM-Datei
     void saveToPPM(const std::string& filename) const {
         std::ofstream file(filename);
         file << "P3\n" << width << " " << height << "\n255\n";
@@ -34,6 +33,7 @@ public:
                 float g_raw = col[1];
                 float b_raw = col[2];
 
+                //255.999 -> damit es wirklich weiß ist (aufrunden)
                 int r = static_cast<int>(255.999 * r_raw);
                 int g = static_cast<int>(255.999 * g_raw);
                 int b = static_cast<int>(255.999 * b_raw);
