@@ -12,9 +12,10 @@ geometry/CMakeLists.txt
 geometry/CMakeLists.txt
 geometry/extern
 math/extern
-math/out
-geometry/out
-asteroids/out
-raytracing/out
+math/out/*
+geometry/out/*
+asteroids/out/*
+raytracing/out/*
 extern/*
+matrix/out/*
 
