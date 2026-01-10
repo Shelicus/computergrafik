@@ -18,4 +18,6 @@ asteroids/out/*
 raytracing/out/*
 extern/*
 matrix/out/*
-
+asteroids_opengl/out/*
+viewer/out/*
+asteroids_opengl/sound/*

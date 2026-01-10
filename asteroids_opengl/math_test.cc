@@ -1,0 +1,561 @@
+#include "math.h"
+#include "gtest/gtest.h"
+
+namespace {
+	
+TEST(VECTOR, ListInitialization2df) {
+  Vector2df vector = {1.0, 0.0};
+  
+  EXPECT_NEAR(1.0, vector[0], 0.00001);
+  EXPECT_NEAR(0.0, vector[1], 0.00001);
+}
+
+TEST(VECTOR, ListInitialization3df) {
+  Vector3df vector = {1.0, 0.0, 5.0};
+  
+  EXPECT_NEAR(1.0, vector[0], 0.00001);
+  EXPECT_NEAR(0.0, vector[1], 0.00001);
+  EXPECT_NEAR(5.0, vector[2], 0.00001);
+}
+
+
+TEST(VECTOR, ListInitialization4df) {
+  Vector4df vector = {1.0, 0.0, 5.0, -5.0};
+  
+  EXPECT_NEAR(1.0, vector[0], 0.00001);
+  EXPECT_NEAR(0.0, vector[1], 0.00001);
+  EXPECT_NEAR(5.0, vector[2], 0.00001);
+  EXPECT_NEAR(-5.0, vector[3], 0.00001);
+}
+
+TEST(VECTOR, ListInitialization4df_2) {
+  Vector4df vector = {1.0, 2.0, 3.0, 4.0};
+  
+  EXPECT_NEAR(1.0, vector[0], 0.00001);
+  EXPECT_NEAR(2.0, vector[1], 0.00001);
+  EXPECT_NEAR(3.0, vector[2], 0.00001);
+  EXPECT_NEAR(4.0, vector[3], 0.00001);
+}
+
+TEST(VECTOR, ListInitializationSizeToSmall) {
+  Vector4df vector = {1.0, 2.0, 3.0, };
+  
+  EXPECT_NEAR(1.0, vector[0], 0.00001);
+  EXPECT_NEAR(2.0, vector[1], 0.00001);
+  EXPECT_NEAR(3.0, vector[2], 0.00001);
+  EXPECT_NEAR(3.0, vector[3], 0.00001);
+}
+
+TEST(VECTOR, EmptyListInitialization) {
+  Vector4df vector = {};
+  
+  EXPECT_NEAR(0.0, vector[0], 0.00001);
+  EXPECT_NEAR(0.0, vector[1], 0.00001);
+  EXPECT_NEAR(0.0, vector[2], 0.00001);
+  EXPECT_NEAR(0.0, vector[3], 0.00001);
+}
+
+TEST(VECTOR, UnitVectorWithAngle) {
+  Vector2df vector(0.0f);
+  
+  EXPECT_NEAR(1.0, vector[0], 0.00001);
+  EXPECT_NEAR(0.0, vector[1], 0.00001);
+}
+
+TEST(VECTOR, UnitVectorWithAngle90) {
+  Vector2df vector(PI / 2.0f);
+  
+  EXPECT_NEAR(0.0, vector[0], 0.00001);
+  EXPECT_NEAR(1.0, vector[1], 0.00001);
+}
+
+
+TEST(VECTOR, CopyConstructor) {
+  Vector2df vector = {1.0, 0.0};
+  Vector2df copy(vector);
+  EXPECT_NEAR(1.0, copy[0], 0.00001);
+  EXPECT_NEAR(0.0, copy[1], 0.00001);
+}
+
+
+
+TEST(VECTOR, SquareOfLength1) {
+  Vector2df vector = {2.0, 2.0};
+  
+  EXPECT_NEAR(8.0, vector.square_of_length(), 0.00001);
+}
+
+TEST(VECTOR, SquareOfLength3df) {
+  Vector3df vector = {4.0, 0.0, 3.0};
+  
+  EXPECT_NEAR(25.0, vector.square_of_length(), 0.00001);
+}
+
+TEST(VECTOR, Length) {
+  Vector2df vector = {-3.0, 4.0};
+  
+  EXPECT_NEAR(5.0, vector.length(), 0.00001);
+}
+
+TEST(VECTOR, Length3df) {
+  Vector3df vector = {0.0, -4.0, 3.0};
+  float length = vector.length();
+    
+  EXPECT_NEAR(5.0, length, 0.00001);
+}
+
+TEST(VECTOR, Normalize) {
+  Vector2df vector = {-3.0, 4.0};
+  
+  vector.normalize();
+  EXPECT_NEAR(1.0, vector.length(), 0.00001);
+}
+
+TEST(VECTOR, Normalize3df) {
+  Vector3df vector = {-3.0, 4.0, 7.8};
+  
+  vector.normalize();
+  EXPECT_NEAR(1.0, vector.length(), 0.00001);
+}
+
+TEST(VECTOR, Normalize4df) {
+  Vector4df vector = {-3.5, 7.5, 0.001, 4.0};
+  
+  vector.normalize();
+  EXPECT_NEAR(1.0, vector.length(), 0.00001);
+}
+
+TEST(VECTOR, GetReflective1) {
+  Vector2df vector = {1.0, -1.0};
+  Vector2df normal = {0.0, 1.0};
+  
+  Vector2df reflectiv = vector.get_reflective(normal);
+  
+  EXPECT_NEAR(1.0, reflectiv[0], 0.00001);
+  EXPECT_NEAR(1.0, reflectiv[1], 0.00001);
+}
+
+TEST(VECTOR, GetReflective2) {
+  Vector2df vector = {0.0, -1.0};
+  Vector2df normal = {1.0, 1.0};
+  
+  normal.normalize();
+  
+  Vector2df reflectiv = vector.get_reflective(normal);
+  
+  EXPECT_NEAR(1.0, reflectiv[0], 0.00001);
+  EXPECT_NEAR(0.0, reflectiv[1], 0.00001);
+}
+
+TEST(VECTOR, GetReflective3df_1) {
+  Vector3df vector = {0.0, 1.0, -1.0};
+  Vector3df normal = {0.0, 0.0, 1.0};
+  
+  Vector3df reflectiv = vector.get_reflective(normal);
+  
+  EXPECT_NEAR(0.0, reflectiv[0], 0.00001);
+  EXPECT_NEAR(1.0, reflectiv[1], 0.00001);
+  EXPECT_NEAR(1.0, reflectiv[2], 0.00001);
+}
+
+TEST(VECTOR, Angle90) {
+  Vector2df vector{ 0.0f, 1.0f};
+  
+  EXPECT_NEAR(PI / 2.0f, vector.angle(0,1), 0.00001);
+}
+
+TEST(VECTOR, Angle180) {
+  Vector2df vector{ -1.0f, 0.0f};
+  
+  EXPECT_NEAR(PI, vector.angle(0,1), 0.00001);
+}
+
+TEST(VECTOR, Angle270) {
+  Vector2df vector{ 0.0f, -1.0f};
+  
+  EXPECT_NEAR(-PI / 2.0f, vector.angle(0,1), 0.00001);
+}
+
+TEST(VECTOR, Angle0) {
+  Vector2df vector(0.0f);
+  
+  EXPECT_NEAR(0.0f, vector.angle(0,1), 0.00001);
+}
+
+
+TEST(VECTOR, SumsTwoVectors) {
+  Vector2df vector = {1.0, 0.0};
+  Vector2df addend = {-2.0, 1.0};
+  Vector2df sum = vector + addend;
+  
+  EXPECT_NEAR(1.0, vector[0], 0.00001);
+  EXPECT_NEAR(0.0, vector[1], 0.00001);
+  EXPECT_NEAR(-1.0, sum[0], 0.00001);
+  EXPECT_NEAR(1.0, sum[1], 0.00001);
+  EXPECT_NEAR(-2.0, addend[0], 0.00001);
+  EXPECT_NEAR(1.0, addend[1], 0.00001);
+}
+
+TEST(VECTOR, SumsTwoVectors3df) {
+  Vector3df vector = {0.0, 1.0, 0.0};
+  Vector3df addend = {0.0, -2.0, 1.0};
+  Vector3df sum = vector + addend;
+  
+  EXPECT_NEAR( 0.0, sum[0], 0.00001);
+  EXPECT_NEAR(-1.0, sum[1], 0.00001);
+  EXPECT_NEAR( 1.0, sum[2], 0.00001);
+}
+
+
+TEST(VECTOR, AddToVector) {
+  Vector2df vector = {0.1, 0.5};
+  Vector2df addend = {0.0, 0.5};
+  vector += addend;
+  
+  EXPECT_NEAR(0.1, vector[0], 0.00001);
+  EXPECT_NEAR(1.0, vector[1], 0.00001);
+}
+
+TEST(VECTOR, ScalarProduct) {
+  Vector2df vector1 = {1.0, 0.0};
+  Vector2df vector2 = 2.0f * vector1;
+  
+  EXPECT_NEAR(2.0, vector2[0], 0.00001);
+  EXPECT_NEAR(0.0, vector2[1], 0.00001);
+}
+
+TEST(VECTOR, ScalarProduct3df) {
+  Vector3df vector1 = {0.0, 1.0, 0.0};
+  Vector3df vector2 = 2.0f * vector1;
+  
+  EXPECT_NEAR(0.0, vector1[0], 0.00001);
+  EXPECT_NEAR(1.0, vector1[1], 0.00001);
+  EXPECT_NEAR(0.0, vector1[2], 0.00001);
+  EXPECT_NEAR(0.0, vector2[0], 0.00001);
+  EXPECT_NEAR(2.0, vector2[1], 0.00001);
+  EXPECT_NEAR(0.0, vector2[2], 0.00001);
+}
+
+
+TEST(VECTOR, ScalarAssignmentProduct) {
+  Vector2df vector1 = {1.0, 0.0};
+  vector1 *= 2.0;
+  
+  EXPECT_NEAR(2.0, vector1[0], 0.00001);
+  EXPECT_NEAR(0.0, vector1[1], 0.00001);
+}
+
+TEST(VECTOR, ScalarAssignmentDivision) {
+  Vector2df vector1 = {1.0, 0.0};
+  vector1 /= 0.5;
+  
+  EXPECT_NEAR(2.0, vector1[0], 0.00001);
+  EXPECT_NEAR(0.0, vector1[1], 0.00001);
+}
+
+
+TEST(VECTOR, ScalarVectorProduct1) {
+  Vector2df vector1 = {1.0, 0.0};
+  Vector2df vector2 = {0.0, 1.0};
+  
+  EXPECT_NEAR(0.0, vector1 * vector2, 0.00001);
+}
+
+TEST(VECTOR, ScalarVectorProduct2) {
+  Vector3df vector1 = {1.0, 2.0, -1.0};
+  Vector3df vector2 = {-1.0, 1.0, 3.0};
+
+  float scalar = vector1 * vector2;
+
+  EXPECT_NEAR(-2.0, scalar, 0.00001);
+  EXPECT_NEAR(1.0, vector1[0], 0.00001);
+  EXPECT_NEAR(2.0,  vector1[1], 0.00001);
+  EXPECT_NEAR(-1.0, vector1[2], 0.00001);
+  EXPECT_NEAR(-1.0, vector2[0], 0.00001);
+  EXPECT_NEAR(1.0,  vector2[1], 0.00001);
+  EXPECT_NEAR(3.0, vector2[2], 0.00001);
+}
+
+TEST(VECTOR, ScalarVectorProduct3df_1) {
+  Vector3df vector1 = {0.0, 1.0, 0.0};
+  Vector3df vector2 = {0.0, 0.0, 1.0};
+  
+  EXPECT_NEAR(0.0, vector1 * vector2, 0.00001);
+}
+
+TEST(VECTOR, ScalarVectorProduct3df_2) {
+  Vector3df vector1 = {-1.0, 2.0, 3.0};
+  Vector3df vector2 = { 2.0, 2.0, -1.0};
+  
+  EXPECT_NEAR(-1.0, vector1 * vector2, 0.00001);
+}
+
+TEST(VECTOR, ScalarVectorProduct3df_3) {
+  Vector3df vector1 = {0.0,  -2.0, 0.0};
+  Vector3df vector2 = {0.0, -10.0, 0.0};
+  
+  EXPECT_NEAR(20.0, vector1 * vector2, 0.00001);
+}
+
+
+TEST(VECTOR, CrossVectorProduct1) {
+  Vector3df vector1 = {1.0, 0.0, 0.0};
+  Vector3df vector2 = {0.0, 1.0, 0.0};
+  Vector3df cross = vector1.cross_product(vector2);
+  
+  EXPECT_NEAR(0.0, cross[0], 0.00001);
+  EXPECT_NEAR(0.0, cross[1], 0.00001);
+  EXPECT_NEAR(1.0, cross[2], 0.00001);
+}
+
+TEST(VECTOR, CrossVectorProduct2) {
+  Vector3df vector1 = {-2.0, 1.0, -2.0};
+  Vector3df vector2 = {-3.0, 3.0, 0.0};
+  Vector3df cross = vector1.cross_product(vector2);
+  
+  EXPECT_NEAR(-2.0, vector1[0], 0.00001);
+  EXPECT_NEAR(1.0,  vector1[1], 0.00001);
+  EXPECT_NEAR(-2.0, vector1[2], 0.00001);
+  EXPECT_NEAR(-3.0, vector2[0], 0.00001);
+  EXPECT_NEAR(3.0,  vector2[1], 0.00001);
+  EXPECT_NEAR(0.0, vector2[2], 0.00001);
+  EXPECT_NEAR(6.0, cross[0], 0.00001);
+  EXPECT_NEAR(-6.0,  cross[1], 0.00001);
+  EXPECT_NEAR(-3.0, cross[2], 0.00001);
+}
+
+TEST(VECTOR, CrossVectorProduct3) {
+  Vector3df vector1 = {-1.0, 0.0, -4.0};
+  Vector3df vector2 = {2.0, 0.0, -2.0};
+  Vector3df cross = vector1.cross_product(vector2);
+  
+  EXPECT_NEAR(-1.0, vector1[0], 0.00001);
+  EXPECT_NEAR(0.0,  vector1[1], 0.00001);
+  EXPECT_NEAR(-4.0, vector1[2], 0.00001);
+  EXPECT_NEAR(2.0, vector2[0], 0.00001);
+  EXPECT_NEAR(0.0,  vector2[1], 0.00001);
+  EXPECT_NEAR(-2.0, vector2[2], 0.00001);
+  EXPECT_NEAR(0.0, cross[0], 0.00001);
+  EXPECT_NEAR(10.0,  cross[1], 0.00001);
+  EXPECT_NEAR(0.0, cross[2], 0.00001);
+}
+
+TEST(VECTOR, CrossVectorProduct4) {
+  Vector3df vector1 = {-1.0, 0.0, -4.0};
+  Vector3df vector2 = {2.0, 0.0, -2.0};
+  
+  Vector3df cross = vector2.cross_product(vector1);
+  
+  EXPECT_NEAR(-1.0, vector1[0], 0.00001);
+  EXPECT_NEAR(0.0,  vector1[1], 0.00001);
+  EXPECT_NEAR(-4.0, vector1[2], 0.00001);
+  EXPECT_NEAR(2.0, vector2[0], 0.00001);
+  EXPECT_NEAR(0.0,  vector2[1], 0.00001);
+  EXPECT_NEAR(-2.0, vector2[2], 0.00001);
+  EXPECT_NEAR(0.0, cross[0], 0.00001);
+  EXPECT_NEAR(-10.0,  cross[1], 0.00001);
+  EXPECT_NEAR(0.0, cross[2], 0.00001);
+}
+
+TEST(VECTOR, CrossVectorProduct5) {
+  Vector3df a = {-1.0, 0.0, -2.0};
+  Vector3df b = { 2.0, 0.0, 0.0};
+  Vector3df c = { 0.0, 0.0, 2.0};
+  Vector3df ab = b - a;
+  Vector3df ac = c - a;
+  
+  Vector3df cross = ab.cross_product(ac);
+
+  EXPECT_NEAR(3.0, ab[0], 0.00001);
+  EXPECT_NEAR(0.0, ab[1], 0.00001);
+  EXPECT_NEAR(2.0, ab[2], 0.00001);
+
+  EXPECT_NEAR(1.0, ac[0], 0.00001);
+  EXPECT_NEAR(0.0, ac[1], 0.00001);
+  EXPECT_NEAR(4.0, ac[2], 0.00001);
+
+  
+  EXPECT_NEAR(0.0,  cross[0], 0.00001);
+  EXPECT_NEAR(10.0, cross[1], 0.00001);
+  EXPECT_NEAR(0.0,  cross[2], 0.00001);
+}
+
+TEST(VECTOR, CrossVectorProduct6) {
+  Vector3df vector1 = {1.0, 0.0, 0.0};
+  Vector3df vector2 = {0.0, 0.0, 1.0};
+  Vector3df cross = vector1.cross_product(vector2);
+  
+  EXPECT_NEAR(0.0, cross[0], 0.00001);
+  EXPECT_NEAR(1.0, cross[1], 0.00001);
+  EXPECT_NEAR(0.0, cross[2], 0.00001);
+}
+
+TEST(VECTOR, CrossVectorProduct7) {
+  Vector3df vector1 = {0.0, 1.0, 0.0};
+  Vector3df vector2 = {0.0, 0.0, 1.0};
+  Vector3df cross = vector1.cross_product(vector2);
+  
+  EXPECT_NEAR(1.0, cross[0], 0.00001);
+  EXPECT_NEAR(0.0, cross[1], 0.00001);
+  EXPECT_NEAR(0.0, cross[2], 0.00001);
+}
+
+//Tests for the implementation 
+//Length
+TEST(VECTOR, length2D){
+  Vector2df v1 = {4.0, 4.0};
+
+  EXPECT_NEAR(5.6568, v1.length(), 0.0001);
+}
+
+TEST(VECTOR, lengthVector2DFloat){
+  Vector2df v1 = {-8.21, -9.218};
+
+  EXPECT_NEAR(12.344, v1.length(), 0.0001);
+}
+
+TEST(VECTOR, lengthZeroVector2D){
+  Vector2df v1 = {0.0, 0.0};
+
+  EXPECT_EQ(0, v1.length());
+}
+
+//<--------------------------------------------------
+
+TEST(VECTOR, lengthVector3D){
+  Vector3df v1 = {2.0, -4.0, 6.0};
+
+  EXPECT_NEAR(7.4833, v1.length(), 0.0001);
+}
+
+TEST(VECTOR, lengthVector3DFloat){
+  Vector3df v1 = {4.55, -2.78, -5.387};
+
+  EXPECT_NEAR(7.5796, v1.length(), 0.0001);
+}
+
+TEST(VECTOR, lengthZeroVector3D){
+  Vector2df v1 = {0.0, 0.0, 0.0};
+
+  EXPECT_EQ(0, v1.length());
+}
+
+//<------------------------------------------------
+
+TEST(VECTOR, lengthVector4D){
+  Vector4df v1 = {8.0, 7.0, 3.0, -5.0};
+
+  EXPECT_NEAR(12.1243, v1.length(), 0.0001);
+}
+
+TEST(VECTOR, lengthVector4DFloat){
+  Vector4df v1 = {4.59, -2.28, 8.36, -5.387};
+
+  EXPECT_NEAR(11.1882, v1.length(), 0.0001);
+}
+
+TEST(VECTOR, lengthZeroVector4D){
+  Vector4df v1 = {0.0, 0.0, 0.0, 0.0};
+
+  EXPECT_EQ(0, v1.length());
+}
+
+//square_of_length
+
+TEST(VECTOR, SquareOfLength2D){
+  Vector2df v1 = {7.0, 7.0};
+
+  EXPECT_EQ(98, v1.square_of_length());
+}
+
+TEST(VECTOR, SquareOfLengthVector2DFloat){
+  Vector2df v1 = {-1.81, -9.518};
+
+  EXPECT_NEAR(93.8684, v1.square_of_length(), 0.0001);
+}
+
+TEST(VECTOR, SquareOfLengthZeroVector2D){
+  Vector2df v1 = {0.0, 0.0};
+
+  EXPECT_EQ(0, v1.square_of_length());
+}
+
+//<--------------------------------------------------
+
+TEST(VECTOR, SquareOfLengthVector3D){
+  Vector3df v1 = {8.0, -6.0, 2.0};
+
+  EXPECT_EQ(104, v1.square_of_length());
+}
+
+TEST(VECTOR, SquareOfLengthVector3DFloat){
+  Vector3df v1 = {4.95, -2.24, -9.147};
+
+  EXPECT_NEAR(113.1877, v1.square_of_length(), 0.0001);
+}
+
+TEST(VECTOR, SquareOfLengthZeroVector3D){
+  Vector3df v1 = {0.0, 0.0, 0.0};
+
+  EXPECT_EQ(0, v1.square_of_length());
+}
+
+//<------------------------------------------------
+
+TEST(VECTOR, SquareOfLengthVector4D){
+  Vector4df v1 = {99.0, 2.0, 6.0, -2.0};
+
+  EXPECT_EQ(9845, v1.square_of_length());
+}
+
+TEST(VECTOR, SquareOfLengthVector4DFloat){
+  Vector4df v1 = {6.79, -4.67, 6.82, -35.731};
+
+  EXPECT_NEAR(1391.1297, v1.square_of_length(), 0.0001);
+}
+
+TEST(VECTOR, SquareOfLengthZeroVector4D){
+  Vector4df v1 = {0.0, 0.0, 0.0, 0.0};
+
+  EXPECT_EQ(0, v1.square_of_length());
+}
+
+//Skalar Vector
+
+TEST(VECTOR, SklaraVector2D) {
+    Vector2df v1{1.0, 2.0};
+    Vector2df v2{3.0, 4.0};
+
+    EXPECT_DOUBLE_EQ(v1 * v2, 11.0);
+}
+
+TEST(VECTOR, SklaraVector3D) {
+    Vector3df v1{1, 2, 3};
+    Vector3df v2{4, 5, 6};
+
+    EXPECT_EQ(v1 * v2, 32);
+}
+
+TEST(VECTOR, SklaraVector4DFloat) {
+    Vector4df v1{1.0f, 0.5f, -2.0f, 3.0f};
+    Vector4df v2{2.0f, -1.0f, 0.0f, 1.0f};
+
+    EXPECT_NEAR(v1 * v2, 4.5f, 1e-6);
+}
+
+TEST(VECTOR, ZeroVector) {
+    Vector3df v1{0.0f, 0.0f, 0.0f};
+    Vector3df v2{5.0f, -2.0f, 3.0f};
+
+    EXPECT_FLOAT_EQ(v1 * v2, 0.0f);
+}
+
+TEST(VECTOR, NegativeValues) {
+    Vector2df  v1{-3, 4};
+    Vector2df  v2{2, -5};
+
+    EXPECT_EQ(v1 * v2, -26);
+}
+
+
+}
