@@ -486,6 +486,29 @@ void OpenGLRenderer::render() {
                            {       0.0f,               0.0f,  2.0f / 1024.0f,  0.0f},
                            {      -1.0f,               1.0f,           -1.0f,  1.0f}
                          };
+
+  //Implement
+  SquareMatrix4df view_transformation = world_transformation;
+
+  if (game.ship_exists()) {
+
+    TypedBody* ship = game.get_ship(); 
+    Vector2df ship_pos = ship->get_position();
+
+    float dx = 512.0f - ship_pos[0];
+    float dy = 384.0f - ship_pos[1];
+
+    SquareMatrix4df camera_translation = { 
+        {1.0f, 0.0f, 0.0f, 0.0f},
+        {0.0f, 1.0f, 0.0f, 0.0f},
+        {0.0f, 0.0f, 1.0f, 0.0f},
+        {dx,   dy,   0.0f, 1.0f}
+    };
+
+    view_transformation = world_transformation * camera_translation;
+  }
+
+  //End Implementation
                                                  
   glClearColor ( 0.0, 0.0, 0.0, 1.0 );
   glClear ( GL_COLOR_BUFFER_BIT );
@@ -515,9 +538,20 @@ void OpenGLRenderer::render() {
     }
   }
 
+  //New Loop
   debug(2, "render all views");
   for (auto & view : views) {
-    view->render( world_transformation );
+    for (const auto & tile_pos : tile_positions) {
+      SquareMatrix4df tile_translation = { 
+          {1.0f, 0.0f, 0.0f, 0.0f},
+          {0.0f, 1.0f, 0.0f, 0.0f},
+          {0.0f, 0.0f, 1.0f, 0.0f},
+          {tile_pos[0], tile_pos[1], 0.0f, 1.0f}
+      };
+      SquareMatrix4df final_transform = view_transformation * tile_translation;
+
+    view->render( final_transform);
+    }
   }
   
   renderFreeShips(world_transformation);
