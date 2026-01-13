@@ -271,13 +271,13 @@ std::vector<float> create_vertices(WavefrontImporter & wi) {
 }
 
 int main(void) {
-  std::ifstream in("Asteroid.obj"); // Hier objekt angeben
+  std::ifstream in("ufo.obj"); // Hier objekt angeben
   WavefrontImporter wi( in );
   wi.parse();
   std::vector<float> vertices = create_vertices(wi);
   init();
   create_shaders();   
-  view(vertices, 0.5f); // adapt the scale factor to the objects local coordinates
+  view(vertices, 0.2f); // adapt the scale factor to the objects local coordinates
                          // such that the scaled vertex coordinates fit into the canonical box [-1,1]^3
   exit();
   

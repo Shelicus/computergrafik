@@ -16,7 +16,7 @@ find_package(SDL2 REQUIRED)
 
 find_package(SDL2_mixer REQUIRED)
 
-add_executable(main_game game.cc math.cc matrix.cc geometry.cc sdl2_renderer.cc opengl_renderer.cc sound.cc main_game.cc physics.cc sdl2_game_controller.cc timer.cc)
+add_executable(main_game game.cc math.cc matrix.cc geometry.cc sdl2_renderer.cc opengl_renderer.cc sound.cc main_game.cc physics.cc sdl2_game_controller.cc timer.cc wavefront.cc)
 
 target_link_libraries(main_game SDL2::SDL2 SDL2_mixer::SDL2_mixer OPENGL32 GLEW32) # MinGW
 #target_link_libraries(main_game SDL2 SDL2_mixer GL GLEW) # Linux
@@ -32,4 +32,6 @@ add_executable(physics_test physics_test.cc physics.cc geometry.cc math.cc timer
 target_link_libraries(physics_test gtest gtest_main SDL2::SDL2)
 add_executable(game_test game_test.cc game.cc physics.cc geometry.cc math.cc timer.cc)
 target_link_libraries(game_test gtest gtest_main SDL2::SDL2)
+add_executable(wavefront_test wavefront.cc wavefront_test.cc)
+target_link_libraries(wavefront_test gtest gtest_main)
 
